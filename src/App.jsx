@@ -1,12 +1,11 @@
-
+import Navbar from "./sections/Navbar";
 
 function App() {
- 
   return (
-    <>
-     <h1>Welcome to the portfolio project</h1>
-    </>
-  )
+    <main>
+      <Navbar />
+    </main>
+  );
 }
 
-export default App
+export default App;
