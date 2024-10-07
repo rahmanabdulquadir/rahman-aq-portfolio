@@ -24,7 +24,7 @@ const Navbar = () => {
     <div className="max-w-7xl mx-auto">
       <div className="flex justify-between items-center  mx-auto c-space">
         <a href="/" className="text-neutral-400 font-bold text-xl hover:text-white transition-colors">
-          <img className="w-36 h-36" src="/assets/r.png" alt="" />
+          <img className="w-32 h-32" src="/assets/r.png" alt="" />
         </a>
 
         <button
