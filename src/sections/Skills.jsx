@@ -2,7 +2,7 @@
 
 const Skills = () => {
   return (
-    <div className="w-full h-screen space-x">Skills</div>
+    <div className="space-x-y">Skills</div>
   )
 }
 

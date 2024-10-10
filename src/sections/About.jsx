@@ -1,5 +1,5 @@
 const About = () => {
-  return <div className="w-full h-screen space-x">About</div>;
+  return <div className="space-x-y" id="about">About</div>;
 };
 
 export default About;

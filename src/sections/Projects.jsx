@@ -2,7 +2,7 @@
 
 const Projects = () => {
   return (
-    <div className="w-full h-screen space-x">Projects</div>
+    <div className="space-x-y">Projects</div>
   )
 }
 

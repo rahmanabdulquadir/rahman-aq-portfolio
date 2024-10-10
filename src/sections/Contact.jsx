@@ -2,7 +2,7 @@
 
 const Contact = () => {
   return (
-    <div className="w-full h-screen space-x">Contact</div>
+    <div className="space-x-y">Contact</div>
   )
 }
 
