@@ -1,10 +1,8 @@
-
-
 const Navbar = () => {
   return (
-    <div className=" text-white">
-      <div className="container w-full mx-auto">
-        <ul className="flex gap-5">
+    <div className="text-white">
+      <div className=" flex justify-center">
+        <ul className="flex gap-7 w-[500px] justify-center border border-gray-300 my-8 py-5 px-2 rounded-full ">
           <li>Home</li>
           <li>About</li>
           <li>Projects</li>
@@ -13,7 +11,7 @@ const Navbar = () => {
         </ul>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;
