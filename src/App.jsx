@@ -9,8 +9,8 @@ import Skills from "./sections/Skills";
 
 function App() {
   return (
-    <main className="  bg-fixed  bg-cover text-white ">
-      <div className=" bg-black/[0.9]">
+    <main className=" bg-[url('./assets/images/grid.png')] bg-fixed  bg-cover text-white ">
+      <div className=" ">
         <Navbar />
         <Home />
         <About />
@@ -26,3 +26,4 @@ function App() {
 export default App;
 
 // bg-[url('./assets/images/noise.jpg')]
+
