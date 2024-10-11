@@ -1,46 +1,5 @@
-
 import { navLinks } from "../constants";
-
-// export const HamburgerMenu = () => {
-//   return (
-//     <div className="absolute inset-0 pointer-events-none lg:hidden">
-//       <div className="absolute inset-0 opacity-[.03]">
-//         <img
-//           className="w-full h-full object-cover"
-//           src={background}
-//           width={688}
-//           height={953}
-//           alt="Background"
-//         />
-//       </div>
-//     </div>
-//   );
-// };
-
-// const Navbar = () => {
-//   return (
-//     <div className="text-white ">
-//       <div className="flex justify-center">
-//         <ul className="flex gap-7 w-[500px] justify-center border-2 border-gradient-border  my-8 py-5 px-2 rounded-full">
-//           {navLinks.map((item) => (
-//             <li key={item.id}>
-//               <a className="font-code font-semibold" href={item.href}>
-//                 {item.name}
-//               </a>
-//             </li>
-//           ))}
-//         </ul>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default Navbar;
-
-
-
-import  { useState } from 'react';
-
+import { useState } from "react";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -53,7 +12,7 @@ const Navbar = () => {
     <div className="text-white">
       {/* Large Screen Navbar */}
       <div className="hidden md:flex justify-center">
-        <ul className="flex gap-7 w-[500px] justify-center border-2 border-gradient-border my-8 py-5 px-2 rounded-full">
+        <ul className="flex gap-7 w-[500px] justify-center border-2 border-gradient-border mt-8 py-5 px-2 rounded-full">
           {navLinks.map((item) => (
             <li key={item.id}>
               <a className="font-code font-semibold" href={item.href}>
@@ -105,7 +64,7 @@ const Navbar = () => {
       {/* Mobile Menu */}
       <div
         className={`${
-          isOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0'
+          isOpen ? "max-h-screen opacity-100" : "max-h-0 opacity-0"
         } overflow-hidden transition-all duration-300 ease-in-out md:hidden`}
       >
         <ul className="flex flex-col gap-4 border-2 border-gradient-border py-5 px-4 rounded-lg">
