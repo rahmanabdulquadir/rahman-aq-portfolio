@@ -1,3 +1,4 @@
+import ButtonGradient from "./components/Button";
 import About from "./sections/About";
 import Contact from "./sections/Contact";
 import Home from "./sections/Home";
@@ -10,6 +11,7 @@ function App() {
     <main className=" bg-[url('./assets/images/noise.jpg')] bg-fixed  bg-cover text-white ">
       <div className=" bg-black/[0.9]">
         <Navbar />
+        <ButtonGradient />
         <Home />
         <About />
         <Projects />

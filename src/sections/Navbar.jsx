@@ -1,16 +1,20 @@
 import { navLinks } from "../constants";
 
-// const NavItems = ({ onClick = () => {} }) => (
-//   <ul className="flex gap-7 w-[500px] justify-center border border-gray-300 my-8 py-5 px-2 rounded-full">
-//     {navLinks.map((item) => (
-//       <li key={item.id} className="nav-li">
-//         <a href={item.href} className="nav-li_a" onClick={onClick}>
-//           {item.name}
-//         </a>
-//       </li>
-//     ))}
-//   </ul>
-// );
+export const HamburgerMenu = () => {
+  return (
+    <div className="absolute inset-0 pointer-events-none lg:hidden">
+      <div className="absolute inset-0 opacity-[.03]">
+        <img
+          className="w-full h-full object-cover"
+          src={background}
+          width={688}
+          height={953}
+          alt="Background"
+        />
+      </div>
+    </div>
+  );
+};
 const NavItems = () => {
   return (
     <ul className="flex gap-7 w-[500px] justify-center border border-gray-300 my-8 py-5 px-2 rounded-full">
@@ -34,6 +38,8 @@ const Navbar = () => {
           <li>Contact</li>
         </ul> */}
         <NavItems />
+
+        
       </div>
     </div>
   );
