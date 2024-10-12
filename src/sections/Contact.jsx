@@ -1,3 +1,4 @@
+import Button from "../components/Button"
 
 
 const Contact = () => {
@@ -7,7 +8,7 @@ const Contact = () => {
           <div className="lg:w-full flex flex-col lg:flex-row">
             <div className="w-full flex-1 flex lg:justify-start justify-center items-center">
               <div className="w-full flex flex-col justify-center lg:text-start text-center">
-                <h2 className="text-5xl lg:text-start text-center text-[#ccd6f6] font-bold mb-12">
+                <h2 className="lg:text-5xl text-2xl lg:text-start text-center text-[#ac6aff] font-bold mb-12">
                   / contact me <span className="slate w-3 h-10"></span>
                 </h2>
                 <h4 className="text-xl uppercase light-slate font-medium mb-2 tracking-wide">
@@ -18,7 +19,7 @@ const Contact = () => {
                 </h2>
               </div>
             </div>
-            <form className="lg:w-2/4 flex-1 border rounded-2xl flex flex-col gap-y-6 pb-24 p-6 items-start">
+            <form className="lg:w-2/4 flex-1 border rounded-2xl flex flex-col justify-center gap-y-6 p-10 pb-16 px-5  items-start">
               <input
                 className="bg-transparent border-b py-3 outline-none w-full placeholder:text-white focus:border-accent transition-all"
                 type="text"
@@ -34,7 +35,7 @@ const Contact = () => {
                 placeholder="Your message"
               ></textarea>
               <div className="w-full flex justify-center lg:justify-start">
-                <button className="btn btn-lg">Send message</button>
+                <Button>Send Message</Button>
               </div>
             </form>
           </div>

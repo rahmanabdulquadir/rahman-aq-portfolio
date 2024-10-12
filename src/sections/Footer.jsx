@@ -2,12 +2,12 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
   console.log(currentYear);
   return (
-    <div className="text-center slate  p-5">
-      <div>
-        <h3 className="text-md font-sora">
+    <div className="text-center mt-12">
+      <div className="p-5 ">
+        <h3 className="text-sm font-sora">
           Built and designed by Rahman Abdul Quadir.
         </h3>
-        <h4 className="text-sm font-sora">All rights reserved.© {currentYear}</h4>
+        <h4 className="text-xs font-sora">All rights reserved.© {currentYear}</h4>
       </div>
     </div>
   );

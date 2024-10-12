@@ -7,7 +7,7 @@ const About = () => {
       className="space-x-y  flex flex-col-reverse lg:flex-row items-center justify-center"
     >
       <div className="flex-1 lg:w-2/4 w-full lg:text-start text-center">
-        <h2 className="hidden lg:block text-5xl lg:text-start text-center font-bold mb-16">
+        <h2 className="hidden lg:block text-5xl lg:text-start text-center  text-[#ff776f] font-bold mb-16">
           / about me
         </h2>
 
@@ -30,7 +30,7 @@ const About = () => {
         </div>
       </div>
       <div className=" flex flex-col justify-center mt-10 lg:mt-0">
-        <h2 className="lg:hidden block text-2xl lg:text-start text-center font-bold mb-16">
+        <h2 className="lg:hidden block text-2xl lg:text-start text-center text-[#ff776f] font-bold mb-16">
           / about me
         </h2>
         <img
