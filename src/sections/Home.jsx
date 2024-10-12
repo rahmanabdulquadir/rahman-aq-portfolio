@@ -16,8 +16,8 @@ const Home = () => {
         <img className="lg:ml-32 ml-20 mt-[-10px]" src={curve} alt="" />
       </div>
 
-      <p className="text-lg md:text-xl mt-7">I create stuff sometimes</p>
-      <p className="w-[350px] mx-auto">
+      <p className="text-lg md:text-2xl mt-7 bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 bg-clip-text text-transparent">I create stuff sometimes</p>
+      <p className="w-[550px] text-center">
         Howdy! I'm Nowrin. I graduated from North University of China in
         Computer Science and Technology. I'm passionate about Web development.
         Apart from coding, I like to play games, listen music,reading books.
