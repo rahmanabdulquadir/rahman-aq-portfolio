@@ -10,6 +10,8 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
+  color: rgb(148, 146, 146);
 }
 
 :root {
@@ -19,15 +21,9 @@
   color-scheme: dark;
 }
 
-.gradient-border {
-  background: linear-gradient(to right, 
-              cyan, blue, purple, pink, orange); /* Gradient background */
-  background-clip: border-box; /* Clip background to border */
-}
-
 
 .space-x-y{
-  max-width: 84rem;
+  max-width: 80rem;
   min-height: 100vh;
   margin: 0 auto;
 }
