@@ -9,10 +9,10 @@ const Navbar = () => {
   };
 
   return (
-    <div className="text-white">
+    <div className="text-gray-400 lg:h-[100px]">
       {/* Large Screen Navbar */}
-      <div className="hidden md:flex justify-center">
-        <ul className="flex gap-7 w-[500px] justify-center border-2 border-gradient-border mt-8 py-5 px-2 rounded-full">
+      <div className="hidden w-full md:flex justify-center ">
+        <ul className="flex gap-7 w-[700px] justify-evenly border-2 border-gradient-border mt-8 py-5 px-2 rounded-full">
           {navLinks.map((item) => (
             <li key={item.id}>
               <a className="font-code font-semibold" href={item.href}>
