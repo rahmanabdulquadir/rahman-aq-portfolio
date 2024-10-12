@@ -1,6 +1,7 @@
 import ButtonGradient from "./assets/svg/ButtonGradient";
 import About from "./sections/About";
 import Contact from "./sections/Contact";
+import Footer from "./sections/Footer";
 import Home from "./sections/Home";
 import Navbar from "./sections/Navbar";
 import Projects from "./sections/Projects";
@@ -17,6 +18,7 @@ function App() {
         <Projects />
         <Skills />
         <Contact />
+        <Footer/>
         <ButtonGradient />
       </div>
     </main>
