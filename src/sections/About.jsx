@@ -7,7 +7,7 @@ const About = () => {
       className="space-x-y  flex flex-col-reverse lg:flex-row items-center justify-center"
     >
       <div className="flex-1 lg:w-2/4 w-full lg:text-start text-center">
-        <h2 className="hidden lg:block text-5xl lg:text-start text-center  text-[#ff776f] font-bold mb-16">
+        <h2 className="hidden lg:block text-5xl lg:text-start text-center text-[#ff776f] font-bold mb-16">
           / about me
         </h2>
 
@@ -15,7 +15,7 @@ const About = () => {
           <h3 className="text-4xl font-semibold mb-4 bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 bg-clip-text text-transparent">
             Front-end Developer
           </h3>
-          <p className="mb-6 lg:w-[700px] lg:text-start text-center text-lg lg:text-2xl leading-loose">
+          <p className="mb-6 lg:w-[600px] lg:text-start text-center text-lg lg:text-xl leading-loose">
             Hey there, I am Rahman Abdul Quadir, a web developer with a twist of
             unconventional creativity.I have great interest in full-stack
             development, artificial intelligence, human-computer interactions,
@@ -29,8 +29,8 @@ const About = () => {
           </div>
         </div>
       </div>
-      <div className=" flex flex-col justify-center mt-10 lg:mt-0">
-        <h2 className="lg:hidden block text-2xl lg:text-start text-center text-[#ff776f] font-bold mb-16">
+      <div className=" flex flex-col justify-center lg:mt-0">
+        <h2 className="lg:hidden block text-2xl lg:text-start text-center text-[#ff776f] font-bold mb-12">
           / about me
         </h2>
         <img
