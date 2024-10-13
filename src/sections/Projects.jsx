@@ -31,7 +31,7 @@ const Projects = () => {
        
       <div>
       <h2 className="lg:text-5xl text-2xl lg:text-start text-center text-[#48dd70] font-bold mb-12">
-          / projects <span className="slate w-3 h-10"></span>
+          / projects
         </h2>
 
         <div className="grid grid-cols-1 place-items-center lg:grid-cols-3 gap-10 justify-center items-center mt-10">
