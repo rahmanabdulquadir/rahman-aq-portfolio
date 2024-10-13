@@ -1,39 +1,52 @@
-
+import Button from "../components/Button";
 
 const projects = [
   {
     id: 1,
-    title: 'Project One',
-    description: 'A brief description of Project One.',
-    image: 'path-to-image', // Replace with actual image path
-    link: 'https://project-one.com'
+    title: "Project One",
+    description: "A brief description of Project One.",
+    image: "path-to-image", // Replace with actual image path
+    link: "https://project-one.com",
   },
   {
     id: 2,
-    title: 'Project Two',
-    description: 'A brief description of Project Two.',
-    image: 'path-to-image',
-    link: 'https://project-two.com'
+    title: "Project Two",
+    description: "A brief description of Project Two.",
+    image: "path-to-image",
+    link: "https://project-two.com",
   },
   // Add more projects as needed
 ];
 
 const Projects = () => {
   return (
-    <div className="p-8">
-      <h2 className="text-4xl font-bold text-center mb-10">My Projects</h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+    <div className="space-x-y">
+      <h2 className="lg:text-5xl text-2xl lg:text-start text-center text-[#48dd70] font-bold mb-3">
+        / projects <span className="slate w-3 h-10"></span>
+      </h2>
+
+      <div className="flex justify-center items-center">
         {projects.map((project) => (
-          <div key={project.id} className="bg-white shadow-lg rounded-lg overflow-hidden transform transition-transform hover:scale-105">
-            <img src={project.image} alt={project.title} className="w-full h-56 object-cover" />
-            <div className="p-6">
-              <h3 className="text-2xl font-bold mb-2">{project.title}</h3>
-              <p className="text-gray-600 mb-4">{project.description}</p>
-              <a href={project.link} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:text-blue-600 font-semibold">
-                View Project
-              </a>
-            </div>
+          <div key={project.id} className="group w-80 h-96 bg-black shadow-lg rounded-lg overflow-hidden relative transform transition-transform duration-500 hover:scale-105">
+          <img
+            src="https://via.placeholder.com/320x180"
+            alt="Project Image"
+            className="w-full h-40 object-cover"
+          />
+          {/* Card Content */}
+          <div className="p-6">
+            <h2 className="text-2xl font-bold mb-2">Magic Card</h2>
+            <p className="text-gray-600 mb-4">
+              This is a Magic UI-inspired card with smooth hover animations.
+            </p>
+            <a
+              href="#"
+              className="text-blue-500 hover:text-blue-600 font-semibold transition-colors duration-300"
+            >
+              Learn More
+            </a>
           </div>
+        </div>
         ))}
       </div>
     </div>
