@@ -5,44 +5,71 @@ import {
   FaCss3Alt,
   FaHtml5,
   FaJs,
+  FaGitAlt,
+  FaAws,
+  FaPython,
 } from "react-icons/fa";
+import {
+  SiMongodb,
+  SiTailwindcss,
+  SiTypescript,
+  SiNextdotjs,
+  SiGraphql,
+} from "react-icons/si";
+
 const Skills = () => {
   const skills = [
     {
       id: 1,
       name: "React.js",
-      level: "90%",
-      icon: <FaReact className="text-blue-400" />,
+      icon: <FaReact className="text-blue-500" />,
     },
     {
       id: 2,
-      name: "Node.js",
-      level: "85%",
-      icon: <FaNodeJs className="text-green-400" />,
+      name: "Next.js",
+      icon: <SiNextdotjs className="text-black" />,
     },
     {
       id: 3,
-      name: "MongoDB",
-      level: "80%",
-      icon: <FaDatabase className="text-green-600" />,
+      name: "Node.js",
+      icon: <FaNodeJs className="text-green-500" />,
     },
     {
       id: 4,
-      name: "CSS3",
-      level: "90%",
-      icon: <FaCss3Alt className="text-blue-500" />,
+      name: "MongoDB",
+      icon: <SiMongodb className="text-green-600" />,
     },
     {
       id: 5,
-      name: "HTML5",
-      level: "95%",
-      icon: <FaHtml5 className="text-orange-500" />,
+      name: "TypeScript",
+      icon: <SiTypescript className="text-blue-600" />,
     },
     {
       id: 6,
       name: "JavaScript",
-      level: "92%",
       icon: <FaJs className="text-yellow-400" />,
+    },
+    {
+      id: 7,
+      name: "CSS3",
+      icon: <FaCss3Alt className="" />,
+    },
+    {
+      id: 8,
+      name: "HTML5",
+      icon: <FaHtml5 className="text-orange-500" />,
+    },
+    {
+      id: 9,
+      name: "Tailwind CSS",
+      icon: <SiTailwindcss className="text-cyan-500" />,
+    },
+  
+
+    {
+      id: 12,
+      name: "Git",
+      icon: <FaGitAlt className="text-orange-500" />,
     },
   ];
   return (
@@ -51,28 +78,18 @@ const Skills = () => {
         / Skills
       </h2>
 
-      <div className="p-8">
-        <h2 className="text-4xl font-bold text-center mb-10">My Skills</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className=" py-12">
+        {/* <h2 className="text-4xl font-bold text-center mb-8">
+          
+        </h2> */}
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-8 max-w-4xl mx-auto">
           {skills.map((skill) => (
             <div
               key={skill.id}
-              className=" shadow-lg p-6 rounded-lg transform transition-transform duration-500 hover:scale-105 hover:shadow-xl flex items-center gap-4"
+              className={`flex flex-col items-center justify-center p-6 rounded-lg shadow-lg transform transition duration-300 hover:scale-105 bg-gradient-to-r ${skill.color}`}
             >
-              {/* Skill Icon */}
-              <div className="text-4xl">{skill.icon}</div>
-
-              {/* Skill Name and Bar */}
-              <div className="flex-1">
-                <h3 className="text-2xl font-semibold">{skill.name}</h3>
-                <div className="w-full bg-gray-200 rounded-full h-4 mt-2">
-                  <div
-                    className={`bg-gradient-to-r from-blue-400 via-green-400 to-yellow-400 h-full rounded-full`}
-                    style={{ width: skill.level }}
-                  ></div>
-                </div>
-                <p className="text-right mt-2 font-semibold">{skill.level}</p>
-              </div>
+              <div className="text-6xl mb-4">{skill.icon}</div>
+              <h3 className="text-xl font-semibold text-white">{skill.name}</h3>
             </div>
           ))}
         </div>
