@@ -7,7 +7,7 @@ const Home = () => {
   return (
     <div
       id="home"
-      className={`space-x-y relative  flex flex-col items-center justify-center  text-white text-center p-2`}
+      className={`space-x-y relative  flex flex-col items-center justify-center text-center`}
     >
       <h1 className="text-4xl md:text-7xl font-bold mb-4 font-code">
         hi, <span className="bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 bg-clip-text text-transparent">Rahman</span> here!
@@ -18,9 +18,9 @@ const Home = () => {
 
       <p className="text-xl md:text-3xl font-semibold mt-7 bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 bg-clip-text text-transparent">I create stuff sometimes</p>
       <p className="lg:w-[550px] text-center py-5 leading-loose">
-        Howdy! I'm Nowrin. I graduated from North University of China in
+        Howdy! I'm Rahman Abdul Quadir. I graduated from North University of China in
         Computer Science and Technology. I'm passionate about Web development.
-        Apart from coding, I like to play games, listen music,reading books.
+        Apart from coding, I like to play games, listen music, reading books.
       </p>
   
         <Button className="mt-5">

@@ -24,6 +24,6 @@
 
 .space-x-y{
   max-width: 70rem;
-  min-height: 100vh;
+  padding: 100px 20px;
   margin: 0 auto;
 }

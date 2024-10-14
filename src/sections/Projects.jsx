@@ -22,15 +22,13 @@ const projects = [
     image: "path-to-image",
     link: "https://project-two.com",
   },
-  // Add more projects as needed
 ];
 
 const Projects = () => {
   return (
     <div className="space-x-y">
-       
       <div>
-      <h2 className="lg:text-5xl text-2xl lg:text-start text-center text-[#48dd70] font-bold mb-12">
+        <h2 className="lg:text-5xl text-2xl lg:text-start text-center text-[#48dd70] font-bold mb-12">
           / projects
         </h2>
 

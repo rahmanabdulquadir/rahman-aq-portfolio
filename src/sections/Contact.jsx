@@ -19,7 +19,7 @@ const Contact = () => {
                 </h2>
               </div>
             </div>
-            <form className="lg:w-2/4 flex-1 border rounded-2xl flex flex-col justify-center gap-y-6 p-10 pb-16 px-5  items-start">
+            <form className="lg:w-2/4 flex-1 border rounded-2xl flex flex-col justify-center gap-y-6 px-16 py-12  items-start">
               <input
                 className="bg-transparent border-b py-3 outline-none w-full placeholder:text-white focus:border-accent transition-all"
                 type="text"

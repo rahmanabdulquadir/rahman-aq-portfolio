@@ -4,7 +4,7 @@ const About = () => {
   return (
     <div
       id="about"
-      className="space-x-y  flex flex-col-reverse lg:flex-row items-center justify-center"
+      className="space-x-y  flex flex-col-reverse lg:flex-row justify-center"
     >
       <div className="flex-1 lg:w-2/4 w-full lg:text-start text-center">
         <h2 className="hidden lg:block text-5xl lg:text-start text-center text-[#ff776f] font-bold mb-16">
@@ -13,7 +13,7 @@ const About = () => {
 
         <div className="px-6">
           <h3 className="text-4xl font-semibold mb-4 bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 bg-clip-text text-transparent">
-            Front-end Developer
+            Frontend Developer
           </h3>
           <p className="mb-6 lg:w-[600px] lg:text-start text-center text-lg lg:text-xl leading-loose">
             Hey there, I am Rahman Abdul Quadir, a web developer with a twist of
@@ -34,7 +34,7 @@ const About = () => {
           / about me
         </h2>
         <img
-          className="lg:w-[280px] lg:h-[280px] w-60 h-60 rounded-xl pb-7"
+          className="lg:w-[280px] lg:h-[280px] w-60 h-60 mx-auto rounded-xl pb-7 "
           // src={image}
           alt=""
         />
