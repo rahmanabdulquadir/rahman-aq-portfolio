@@ -1,4 +1,5 @@
 import Button from "../components/Button";
+import rahmanImg from "../assets/images/rahman_aq.jpg";
 
 const About = () => {
   return (
@@ -34,8 +35,8 @@ const About = () => {
           / about me
         </h2>
         <img
-          className="lg:w-[280px] lg:h-[280px] w-60 h-60 mx-auto rounded-xl pb-7 "
-          // src={image}
+          className="lg:w-[310px] lg:h-[320px] w-60 h-60 mx-auto rounded-xl lg:mt-20 pb-7 lg:pb-0 transition-all duration-500 ease-in-out filter grayscale hover:grayscale-0"
+          src={rahmanImg}
           alt=""
         />
       </div>
