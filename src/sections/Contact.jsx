@@ -3,13 +3,13 @@ import Button from "../components/Button"
 
 const Contact = () => {
   return (
-    <section id="contact" className="h-[600px] flex items-center mt-36 lg:section">
+    <section id="contact" className=" flex items-center mt-16">
         <div className="container mx-auto">
           <div className="lg:w-full flex flex-col lg:flex-row">
             <div className="w-full flex-1 flex lg:justify-start justify-center items-center">
               <div className="w-full flex flex-col justify-center lg:text-start text-center">
                 <h2 className="lg:text-5xl text-2xl lg:text-start text-center text-[#ac6aff] font-bold mb-12">
-                  / contact me <span className="slate w-3 h-10"></span>
+                  / contact 
                 </h2>
                 <h4 className="text-xl uppercase light-slate font-medium mb-2 tracking-wide">
                   Get in touch

@@ -1,20 +1,16 @@
 import {
   FaReact,
   FaNodeJs,
-  FaDatabase,
   FaCss3Alt,
   FaHtml5,
   FaJs,
   FaGitAlt,
-  FaAws,
-  FaPython,
 } from "react-icons/fa";
 import {
   SiMongodb,
   SiTailwindcss,
   SiTypescript,
   SiNextdotjs,
-  SiGraphql,
 } from "react-icons/si";
 
 const Skills = () => {
@@ -64,7 +60,6 @@ const Skills = () => {
       name: "Tailwind CSS",
       icon: <SiTailwindcss className="text-cyan-500" />,
     },
-  
 
     {
       id: 12,
@@ -74,11 +69,11 @@ const Skills = () => {
   ];
   return (
     <div className="space-x-y lg:pt-0 pt-24">
-      <h2 className="lg:text-5xl text-2xl lg:text-start text-center text-[#FFC876] font-bold mb-3">
+      <h2 className="lg:text-5xl text-2xl lg:text-start text-center text-[#FFC876] font-bold ">
         / Skills
       </h2>
 
-      <div className=" py-12">
+      <div className=" py-10">
         {/* <h2 className="text-4xl font-bold text-center mb-8">
           
         </h2> */}
@@ -89,7 +84,7 @@ const Skills = () => {
               className={`flex flex-col items-center justify-center p-6 rounded-lg shadow-lg transform transition duration-300 hover:scale-105 bg-gradient-to-r ${skill.color}`}
             >
               <div className="text-6xl mb-4">{skill.icon}</div>
-              <h3 className="text-xl font-semibold text-white">{skill.name}</h3>
+              <h3 className="text-xl font-semibold">{skill.name}</h3>
             </div>
           ))}
         </div>
