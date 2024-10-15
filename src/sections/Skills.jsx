@@ -70,7 +70,7 @@ const Skills = () => {
   return (
     <div className="space-x-y lg:pt-0 pt-24">
       <h2 className="lg:text-5xl text-2xl lg:text-start text-center text-[#FFC876] font-bold ">
-        / Skills
+        / skills
       </h2>
 
       <div className=" py-10">
