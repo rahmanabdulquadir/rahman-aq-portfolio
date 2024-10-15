@@ -13,7 +13,7 @@ const Home = () => {
       className={`space-x-y relative pt-20  flex flex-col items-center justify-center text-center`}
     >
       <motion.h1
-        variants={fadeIn("up", 1.3)}
+        variants={fadeIn("up", 0.3)}
         initial="hidden"
         whileInView={"show"}
         viewport={{ once: true, amount: 0.3 }}
@@ -25,19 +25,37 @@ const Home = () => {
         </span>{" "}
         here!
       </motion.h1>
-      <div className="lg:w-[370px] w-[200px]">
+      <motion.div
+        variants={fadeIn("up", 0.8)}
+        initial="hidden"
+        whileInView={"show"}
+        viewport={{ once: true, amount: 0.3 }}
+        className="lg:w-[370px] w-[200px]"
+      >
         <img className="lg:ml-32 ml-20 mt-[-10px]" src={curve} alt="" />
-      </div>
+      </motion.div>
 
-      <p className="text-xl md:text-3xl font-semibold mt-7 bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 bg-clip-text text-transparent">
+      <motion.p
+        variants={fadeIn("up", 0.3)}
+        initial="hidden"
+        whileInView={"show"}
+        viewport={{ once: true, amount: 0.3 }}
+        className="text-xl md:text-3xl font-semibold mt-7 bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 bg-clip-text text-transparent"
+      >
         I create stuff sometimes
-      </p>
-      <p className="lg:w-[550px] text-center py-5 leading-loose">
+      </motion.p>
+      <motion.p
+        variants={fadeIn("up", 0.3)}
+        initial="hidden"
+        whileInView={"show"}
+        viewport={{ once: true, amount: 0.3 }}
+        className="lg:w-[550px] text-center py-5 leading-loose"
+      >
         Howdy! I'm Rahman Abdul Quadir. I graduated from North University of
         China in Computer Science and Technology. I'm passionate about Web
         development. Apart from coding, I like to play games, listen music,
         reading books.
-      </p>
+      </motion.p>
 
       <Button className="mt-5">
         <a href="#" className=" font-code">

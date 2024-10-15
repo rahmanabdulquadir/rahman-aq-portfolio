@@ -12,7 +12,7 @@ const About = () => {
           / about me
         </h2>
 
-        <div className="px-6">
+        <div className="">
           <h3 className="text-4xl font-semibold mb-4 bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 bg-clip-text text-transparent">
             Frontend Developer
           </h3>
