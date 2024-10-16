@@ -16,7 +16,7 @@ const Home = () => {
         variants={fadeIn("up", 0.3)}
         initial="hidden"
         whileInView={"show"}
-        viewport={{ once: true, amount: 0.3 }}
+        viewport={{ once: true, amount: 0.8 }}
         className="text-4xl md:text-7xl font-bold mb-4 font-code"
       >
         hi,{" "}
@@ -26,10 +26,10 @@ const Home = () => {
         here!
       </motion.h1>
       <motion.div
-        variants={fadeIn("up", 0.8)}
+        variants={fadeIn("up", 0.6)}
         initial="hidden"
         whileInView={"show"}
-        viewport={{ once: true, amount: 0.3 }}
+        viewport={{ once: true, amount: 0}}
         className="lg:w-[370px] w-[200px]"
       >
         <img className="lg:ml-32 ml-20 mt-[-10px]" src={curve} alt="" />
@@ -57,10 +57,16 @@ const Home = () => {
         reading books.
       </motion.p>
 
-      <Button className="mt-5">
-        <a href="#" className=" font-code">
+      <Button
+       
+        className="mt-5"
+      >
+        <motion.a  variants={fadeIn("up", 0.2)}
+        initial="hidden"
+        whileInView={"show"}
+        viewport={{ once: true, amount: 0.8 }} href="#" className=" font-code">
           Resume
-        </a>
+        </motion.a>
       </Button>
 
       <img src={bubble} alt="" className="absolute z-[-20]" />

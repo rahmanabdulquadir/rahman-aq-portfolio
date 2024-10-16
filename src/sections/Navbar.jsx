@@ -1,5 +1,7 @@
 import { navLinks } from "../constants";
 import { useState } from "react";
+import { motion } from "framer-motion";
+import { fadeIn } from "../components/MotionVariation";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,7 +13,13 @@ const Navbar = () => {
   return (
     <div className="text-gray-400 lg:h-[100px]">
       {/* Large Screen Navbar */}
-      <div className="hidden w-full md:flex justify-center ">
+      <motion.div
+        variants={fadeIn("down", 0.3)}
+        initial="hidden"
+        whileInView={"show"}
+        viewport={{ once: true, amount: 0.3 }}
+        className="hidden w-full md:flex justify-center "
+      >
         <ul className="flex gap-7 w-[700px] justify-evenly border-2 border-gradient-border mt-8 py-5 px-2 rounded-full">
           {navLinks.map((item) => (
             <li key={item.id}>
@@ -21,7 +29,7 @@ const Navbar = () => {
             </li>
           ))}
         </ul>
-      </div>
+      </motion.div>
 
       {/* Small Screen Navbar */}
       <div className="md:hidden flex justify-between items-center px-4 py-5">
