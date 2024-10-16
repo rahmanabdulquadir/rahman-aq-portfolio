@@ -4,7 +4,6 @@ import curve from "../assets/images/curve.png";
 import bubble from "../assets/images/bubble.svg";
 import { motion } from "framer-motion";
 import { fadeIn } from "../components/MotionVariation";
-// import { fadeInVariant } from "../components/MotionVariation";
 
 const Home = () => {
   return (

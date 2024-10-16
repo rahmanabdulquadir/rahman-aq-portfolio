@@ -1,5 +1,7 @@
 import Button from "../components/Button";
 import rahmanImg from "../assets/images/rahman_aq.jpg";
+import { motion } from "framer-motion";
+import { fadeIn } from "../components/MotionVariation";
 
 const About = () => {
   return (
@@ -7,7 +9,13 @@ const About = () => {
       id="about"
       className="space-x-y  flex flex-col-reverse lg:flex-row justify-center"
     >
-      <div className="flex-1 lg:w-2/4 w-full lg:text-start text-center">
+      <motion.div
+        variants={fadeIn("right", 0.5)}
+        initial="hidden"
+        whileInView={"show"}
+        viewport={{ once: true, amount: 0.3 }}
+        className="flex-1 lg:w-2/4 w-full lg:text-start text-center"
+      >
         <h2 className="hidden lg:block text-5xl lg:text-start text-center text-[#ff776f] font-bold mb-16">
           / about me
         </h2>
@@ -29,8 +37,11 @@ const About = () => {
             <Button>My Portfolio</Button>
           </div>
         </div>
-      </div>
-      <div className=" flex flex-col justify-center lg:mt-0">
+      </motion.div>
+      <motion.div  variants={fadeIn("left", 0.7)}
+        initial="hidden"
+        whileInView={"show"}
+        viewport={{ once: true, amount: 0.3 }} className=" flex flex-col justify-center lg:mt-0">
         <h2 className="lg:hidden block text-2xl lg:text-start text-center text-[#ff776f] font-bold mb-12">
           / about me
         </h2>
@@ -39,7 +50,7 @@ const About = () => {
           src={rahmanImg}
           alt=""
         />
-      </div>
+      </motion.div>
     </div>
   );
 };
