@@ -12,7 +12,7 @@ import {
   SiTypescript,
   SiNextdotjs,
 } from "react-icons/si";
-import { fadeIn } from "../components/MotionVariation";
+import { fadeIn, fadeIn2, parentVariants } from "../components/MotionVariation";
 import { motion } from "framer-motion";
 
 const Skills = () => {
@@ -72,7 +72,7 @@ const Skills = () => {
   return (
     <div className="space-x-y lg:pt-0 pt-24">
       <motion.h2
-        variants={fadeIn("down", 0.1)}
+        variants={fadeIn("down", 0.5)}
         initial="hidden"
         whileInView={"show"}
         viewport={{ once: true, amount: 0.3 }}
@@ -86,20 +86,21 @@ const Skills = () => {
           
         </h2> */}
         <motion.div
-          variants={fadeIn("up", 0.6)}
+          variants={parentVariants}
           initial="hidden"
           whileInView={"show"}
           viewport={{ once: true, amount: 0.3 }}
           className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-8 max-w-4xl mx-auto"
         >
           {skills.map((skill) => (
-            <div
+            <motion.div
+              variants={fadeIn2}
               key={skill.id}
               className={`flex flex-col items-center justify-center p-6 rounded-lg shadow-lg transform transition duration-300 hover:scale-105 bg-gradient-to-r ${skill.color}`}
             >
               <div className="text-6xl mb-4">{skill.icon}</div>
               <h3 className="text-xl font-semibold">{skill.name}</h3>
-            </div>
+            </motion.div>
           ))}
         </motion.div>
       </div>

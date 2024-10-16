@@ -19,6 +19,21 @@ export const fadeIn = (direction, delay) => {
   };
 };
 
+export const fadeIn2 = {
+  hidden: {
+    opacity: 0,
+    y: 20, // Starts from below
+  },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      type: "tween",
+      duration: 0.5, // Each skill will take 0.5s to appear
+    },
+  },
+};
+
 export const slideIn = (direction = 'left', duration = 1, delay = 0) => {
   const variants = {
     left: { x: -100 },
@@ -40,4 +55,17 @@ export const slideIn = (direction = 'left', duration = 1, delay = 0) => {
       },
     },
   };
+};
+
+
+export const parentVariants = {
+  hidden: {
+    opacity: 0,
+  },
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2, // This delays each child animation by 0.2 seconds
+    },
+  },
 };
