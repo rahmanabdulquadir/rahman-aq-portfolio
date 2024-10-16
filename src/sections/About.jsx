@@ -16,9 +16,12 @@ const About = () => {
         viewport={{ once: true, amount: 0.3 }}
         className="flex-1 lg:w-2/4 w-full lg:text-start text-center"
       >
-        <h2 className="hidden lg:block text-5xl lg:text-start text-center text-[#ff776f] font-bold mb-16">
+        <motion.h2  variants={fadeIn("up", 0.1)}
+        initial="hidden"
+        whileInView={"show"}
+        viewport={{ once: true, amount: 0.3 }} className="hidden lg:block text-5xl lg:text-start text-center text-[#ff776f] font-bold mb-16">
           / about me
-        </h2>
+        </motion.h2>
 
         <div className="">
           <h3 className="text-4xl font-semibold mb-4 bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 bg-clip-text text-transparent">

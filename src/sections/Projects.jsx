@@ -1,4 +1,6 @@
 import Button from "../components/Button";
+import { motion } from "framer-motion";
+import { fadeIn } from "../components/MotionVariation";
 
 const projects = [
   {
@@ -28,11 +30,23 @@ const Projects = () => {
   return (
     <div className="space-x-y">
       <div>
-        <h2 className="lg:text-5xl text-2xl lg:text-start text-center text-[#48dd70] font-bold mb-12">
+        <motion.h2
+          variants={fadeIn("up", 0.1)}
+          initial="hidden"
+          whileInView={"show"}
+          viewport={{ once: true, amount: 0.3 }}
+          className="lg:text-5xl text-2xl lg:text-start text-center text-[#48dd70] font-bold mb-12"
+        >
           / projects
-        </h2>
+        </motion.h2>
 
-        <div className="grid grid-cols-1 place-items-center lg:grid-cols-3 gap-10 justify-center items-center mt-10">
+        <motion.div
+          variants={fadeIn("down", 0.5)}
+          initial="hidden"
+          whileInView={"show"}
+          viewport={{ once: true, amount: 0.3 }}
+          className="grid grid-cols-1 place-items-center lg:grid-cols-3 gap-10 justify-center items-center mt-10"
+        >
           {projects.map((project) => (
             <div
               key={project.id}
@@ -70,7 +84,7 @@ const Projects = () => {
               </div>
             </div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </div>
   );
