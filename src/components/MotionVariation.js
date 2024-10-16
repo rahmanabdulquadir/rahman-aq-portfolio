@@ -69,3 +69,20 @@ export const parentVariants = {
     },
   },
 };
+
+export const zoomIn = (delay = 0) => {
+  return {
+    hidden: { scale: 0.8, opacity: 0 },
+    show: {
+      scale: 1,
+      opacity: 1,
+      transition: {
+        type: "spring",
+        stiffness: 200,
+        damping: 20,
+        duration: 0.5,
+        delay: delay,
+      },
+    },
+  };
+};

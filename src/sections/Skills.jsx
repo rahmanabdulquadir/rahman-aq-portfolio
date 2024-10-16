@@ -10,6 +10,8 @@ import {
   SiMongodb,
   SiTailwindcss,
   SiTypescript,
+  SiRedux,
+  SiExpress,
   SiNextdotjs,
 } from "react-icons/si";
 import { fadeIn, fadeIn2, parentVariants } from "../components/MotionVariation";
@@ -29,36 +31,46 @@ const Skills = () => {
     },
     {
       id: 3,
+      name: "Redux",
+      icon: <SiRedux className="text-black" />,
+    },
+    {
+      id: 4,
       name: "Node.js",
       icon: <FaNodeJs className="text-green-500" />,
     },
     {
-      id: 4,
+      id: 5,
+      name: "Express",
+      icon: <SiExpress className="text-green-500" />,
+    },
+    {
+      id: 6,
       name: "MongoDB",
       icon: <SiMongodb className="text-green-600" />,
     },
     {
-      id: 5,
+      id: 7,
       name: "TypeScript",
       icon: <SiTypescript className="text-blue-600" />,
     },
     {
-      id: 6,
+      id: 8,
       name: "JavaScript",
       icon: <FaJs className="text-yellow-400" />,
     },
     {
-      id: 7,
+      id: 9,
       name: "CSS3",
       icon: <FaCss3Alt className="" />,
     },
     {
-      id: 8,
+      id: 10,
       name: "HTML5",
       icon: <FaHtml5 className="text-orange-500" />,
     },
     {
-      id: 9,
+      id: 11,
       name: "Tailwind CSS",
       icon: <SiTailwindcss className="text-cyan-500" />,
     },

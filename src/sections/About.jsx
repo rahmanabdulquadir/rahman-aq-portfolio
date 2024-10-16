@@ -1,11 +1,15 @@
 import Button from "../components/Button";
 import rahmanImg from "../assets/images/rahman_aq.jpg";
 import { motion } from "framer-motion";
-import { fadeIn } from "../components/MotionVariation";
+import { fadeIn, zoomIn } from "../components/MotionVariation";
 
 const About = () => {
   return (
-    <div
+    <motion.div
+      variants={zoomIn(0.2)} // Add delay as needed
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true, amount: 0.5 }}
       id="about"
       className="space-x-y  flex flex-col-reverse lg:flex-row justify-center"
     >
@@ -16,10 +20,13 @@ const About = () => {
         viewport={{ once: true, amount: 0.3 }}
         className="flex-1 lg:w-2/4 w-full lg:text-start text-center"
       >
-        <motion.h2  variants={fadeIn("up", 0.1)}
-        initial="hidden"
-        whileInView={"show"}
-        viewport={{ once: true, amount: 0.3 }} className="hidden lg:block text-5xl lg:text-start text-center text-[#ff776f] font-bold mb-16">
+        <motion.h2
+          variants={fadeIn("up", 0.1)}
+          initial="hidden"
+          whileInView={"show"}
+          viewport={{ once: true, amount: 0.3 }}
+          className="hidden lg:block text-5xl lg:text-start text-center text-[#ff776f] font-bold mb-16"
+        >
           / about me
         </motion.h2>
 
@@ -41,10 +48,13 @@ const About = () => {
           </div>
         </div>
       </motion.div>
-      <motion.div  variants={fadeIn("left", 0.7)}
+      <motion.div
+        variants={fadeIn("left", 0.7)}
         initial="hidden"
         whileInView={"show"}
-        viewport={{ once: true, amount: 0.3 }} className=" flex flex-col justify-center lg:mt-0">
+        viewport={{ once: true, amount: 0.3 }}
+        className=" flex flex-col justify-center lg:mt-0"
+      >
         <h2 className="lg:hidden block text-2xl lg:text-start text-center text-[#ff776f] font-bold mb-12">
           / about me
         </h2>
@@ -54,7 +64,7 @@ const About = () => {
           alt=""
         />
       </motion.div>
-    </div>
+    </motion.div>
   );
 };
 
