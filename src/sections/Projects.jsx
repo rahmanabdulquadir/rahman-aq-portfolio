@@ -50,7 +50,7 @@ const Projects = () => {
           {projects.map((project) => (
             <div
               key={project.id}
-              className="group w-80 h-96 bg-black shadow-lg rounded-lg overflow-hidden relative transform transition-transform duration-500 hover:scale-105"
+              className="project-card group w-80 h-96 bg-black shadow-lg rounded-lg overflow-hidden relative transform transition-transform duration-500 hover:scale-105"
             >
               <img
                 src="https://via.placeholder.com/320x180"

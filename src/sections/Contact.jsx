@@ -48,7 +48,7 @@ const Contact = () => {
               placeholder="Your message"
             ></textarea>
             <div className="w-full flex justify-center lg:justify-start">
-              <Button>Send Message</Button>
+              <Button className="move-item"><a className="move-item" href="">Send Message</a></Button>
             </div>
           </motion.form>
         </div>

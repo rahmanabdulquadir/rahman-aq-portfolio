@@ -34,11 +34,22 @@
   }
 }
 
-.move-item{
-  @apply transform transition-transform duration-500 hover:scale-105 hover:text-blue-600
+.move-item {
+  @apply transform transition-transform duration-500 hover:scale-105 hover:text-blue-600;
 }
 
-.link-color:hover{
+.link-color:hover {
   color: #3b82f6;
   transition: 0.3s ease-in;
+}
+
+.project-card { 
+  box-shadow: 0 4px 6px rgba(228, 219, 219, 0.745);
+ 
+}
+
+.project-card:hover {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1), /* Regular shadow */
+  0 0 15px 3px rgba(43, 119, 239, 0.548), /* Blue shadow */
+  0 0 20px 6px rgba(150, 55, 238, 0.5); /* Purple shadow */ /* Basic shadow for depth */
 }
