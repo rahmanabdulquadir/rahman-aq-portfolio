@@ -8,7 +8,6 @@ import Projects from "./sections/Projects";
 import Skills from "./sections/Skills";
 import ScrollTrigger from "react-scroll-trigger";
 import { useState } from "react";
-import Header from "./sections/Header";
 
 function App() {
   const [isVisible, setIsVisible] = useState(false);
@@ -23,8 +22,8 @@ function App() {
         {/* Conditionally render the main content based on visibility */}
         {isVisible ? (
           <main className="bg-[url('./assets/images/grid.png')] bg-fixed bg-cover text-white">
-            {/* <Navbar /> */}
-            <Header/>
+            <Navbar />
+            {/* <Header/> */}
             <Home />
             <About />
             <Projects />

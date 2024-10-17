@@ -82,7 +82,7 @@ const Skills = () => {
     },
   ];
   return (
-    <div className="space-x-y lg:pt-0 pt-24">
+    <div id="skills" className="space-x-y lg:pt-0 pt-24">
       <motion.h2
         variants={fadeIn("down", 0.5)}
         initial="hidden"

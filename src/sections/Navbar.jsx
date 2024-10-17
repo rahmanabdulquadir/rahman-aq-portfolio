@@ -1,4 +1,4 @@
-import { navLinks } from "../constants";
+import { navigation } from "../constants";
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { fadeIn } from "../components/MotionVariation";
@@ -18,13 +18,13 @@ const Navbar = () => {
         initial="hidden"
         whileInView={"show"}
         viewport={{ once: true, amount: 0.3 }}
-        className="hidden w-full md:flex justify-center "
+        className="hidden w-full md:flex justify-center backdrop-blur-sm"
       >
         <ul className="flex gap-7 w-[700px] justify-evenly border-2 border-gradient-border mt-8 py-5 px-2 rounded-full">
-          {navLinks.map((item) => (
+          {navigation.map((item) => (
             <li key={item.id}>
               <a className="font-code font-semibold" href={item.href}>
-                {item.name}
+                {item.title}
               </a>
             </li>
           ))}
@@ -37,7 +37,7 @@ const Navbar = () => {
         <button onClick={toggleMenu} className="focus:outline-none">
           {!isOpen ? (
             <svg
-              className="w-6 h-6"
+              className="w-8 h-8"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -52,7 +52,7 @@ const Navbar = () => {
             </svg>
           ) : (
             <svg
-              className="w-6 h-6"
+              className="w-8 h-8"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -69,21 +69,32 @@ const Navbar = () => {
         </button>
       </div>
 
-      {/* Mobile Menu */}
+      {/* Full-screen overlay for mobile menu */}
       <div
         className={`${
-          isOpen ? "max-h-screen opacity-100" : "max-h-0 opacity-0"
-        } overflow-hidden transition-all duration-300 ease-in-out md:hidden`}
+          isOpen ? "opacity-100" : "opacity-0 pointer-events-none"
+        } fixed inset-0 bg-gray-900 bg-opacity-90 z-50 transition-opacity duration-300 ease-in-out md:hidden`}
       >
-        <ul className="flex flex-col gap-4 border-2 border-gradient-border py-5 px-4 rounded-lg">
-          {navLinks.map((item) => (
-            <li key={item.id}>
-              <a className="font-code font-semibold" href={item.href}>
-                {item.name}
-              </a>
-            </li>
-          ))}
-        </ul>
+        <div className="flex justify-end p-4">
+          <button onClick={toggleMenu} className="text-white text-3xl">
+            ✖
+          </button>
+        </div>
+        <div className="flex flex-col justify-center items-center h-full gap-6">
+          <ul className="flex flex-col items-center gap-6 text-white">
+            {navigation.map((item) => (
+              <li key={item.id}>
+                <a
+                  className="text-2xl font-semibold"
+                  href={item.href}
+                  onClick={toggleMenu} // Close menu when a link is clicked
+                >
+                  {item.title}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     </div>
   );

@@ -28,7 +28,7 @@ const projects = [
 
 const Projects = () => {
   return (
-    <div className="space-x-y">
+    <div id="projects" className="space-x-y">
       <div>
         <motion.h2
           variants={fadeIn("up", 0.1)}
