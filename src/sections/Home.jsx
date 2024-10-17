@@ -5,6 +5,7 @@ import bubble from "../assets/images/bubble.svg";
 import { motion } from "framer-motion";
 import { fadeIn } from "../components/MotionVariation";
 import Typewriter from "typewriter-effect";
+import { FaGithub, FaLinkedin, FaEnvelope, FaInstagram } from "react-icons/fa6";
 
 const Home = () => {
   return (
@@ -66,6 +67,22 @@ const Home = () => {
         development. Apart from coding, I like to play games, listen music,
         reading books.
       </motion.p>
+
+      <div className="flex justify-center items-center gap-4">
+        <a href="https://github.com/rahmanabdulquadir" target="_blank">
+          <FaGithub className="size-5" />
+        </a>
+        <a href="rahmanaq777@gmail.com" target="_blank">
+          <FaEnvelope className="size-5" />
+        </a>
+        <a href="https://www.linkedin.com/in/rahman-abdul-quadir-529a46246/" target="_blank">
+        <FaLinkedin className="size-5" />
+        </a>
+        <a href="https://www.instagram.com/___babahyaga" target="_blank">
+          <FaInstagram className="size-5" />
+        </a>
+        
+      </div>
 
       <Button className="mt-5">
         <motion.a

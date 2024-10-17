@@ -33,3 +33,8 @@
     color: black; /* Change to any desired text color */
   }
 }
+
+.space-x-y {
+  @apply max-w-[70rem] 
+}
+
