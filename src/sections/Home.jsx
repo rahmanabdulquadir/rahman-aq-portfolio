@@ -62,10 +62,8 @@ const Home = () => {
         viewport={{ once: true, amount: 0.3 }}
         className="lg:w-[550px] text-center py-5 leading-loose"
       >
-        Howdy! I'm Rahman Abdul Quadir. I graduated from North University of
-        China in Computer Science and Technology. I'm passionate about Web
-        development. Apart from coding, I like to play games, listen music,
-        reading books.
+        Howdy! I'm Rahman Abdul Quadir. I'm passionate about modern web technologies.
+        Apart from coding, I like to play games, listen music,reading books.
       </motion.p>
 
       <div className="flex justify-center items-center gap-6">
@@ -75,13 +73,15 @@ const Home = () => {
         <a href="mailto:rahmanaq777@gmail.com">
           <FaEnvelope className="size-5" />
         </a>
-        <a href="https://www.linkedin.com/in/rahman-abdul-quadir-529a46246/" target="_blank">
-        <FaLinkedin className="size-5" />
+        <a
+          href="https://www.linkedin.com/in/rahman-abdul-quadir-529a46246/"
+          target="_blank"
+        >
+          <FaLinkedin className="size-5" />
         </a>
         <a href="https://www.instagram.com/___babahyaga" target="_blank">
           <FaInstagram className="size-5" />
         </a>
-        
       </div>
 
       <Button className="mt-5 move-item">
