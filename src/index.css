@@ -6,7 +6,7 @@
 @tailwind components;
 @tailwind utilities;
 
-*{
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -21,9 +21,15 @@
   color-scheme: dark;
 }
 
-
-.space-x-y{
+.space-x-y {
   max-width: 70rem;
   padding: 100px 20px;
   margin: 0 auto;
+}
+
+@layer utilities {
+  ::selection {
+    background-color: linen; /* Change to any desired background color */
+    color: black; /* Change to any desired text color */
+  }
 }
