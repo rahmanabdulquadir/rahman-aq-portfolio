@@ -4,6 +4,7 @@ import curve from "../assets/images/curve.png";
 import bubble from "../assets/images/bubble.svg";
 import { motion } from "framer-motion";
 import { fadeIn } from "../components/MotionVariation";
+import Typewriter from "typewriter-effect";
 
 const Home = () => {
   return (
@@ -28,7 +29,7 @@ const Home = () => {
         variants={fadeIn("up", 0.6)}
         initial="hidden"
         whileInView={"show"}
-        viewport={{ once: true, amount: 0}}
+        viewport={{ once: true, amount: 0 }}
         className="lg:w-[370px] w-[200px]"
       >
         <img className="lg:ml-32 ml-20 mt-[-10px]" src={curve} alt="" />
@@ -41,7 +42,17 @@ const Home = () => {
         viewport={{ once: true, amount: 0.3 }}
         className="text-xl md:text-3xl font-semibold mt-7 bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 bg-clip-text text-transparent"
       >
-        I create stuff sometimes
+        <Typewriter
+          options={{
+            strings: [
+              `<span class='bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 bg-clip-text text-transparent'>Frontend developer</span>`,
+              `<span class='bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 bg-clip-text text-transparent'>Mern stack developer</span>`,
+            ],
+            autoStart: true,
+            delay: 75,
+            loop: true,
+          }}
+        />
       </motion.p>
       <motion.p
         variants={fadeIn("up", 0.3)}
@@ -56,14 +67,15 @@ const Home = () => {
         reading books.
       </motion.p>
 
-      <Button
-       
-        className="mt-5"
-      >
-        <motion.a  variants={fadeIn("up", 0.2)}
-        initial="hidden"
-        whileInView={"show"}
-        viewport={{ once: true, amount: 0.8 }} href="#" className=" font-code">
+      <Button className="mt-5">
+        <motion.a
+          variants={fadeIn("up", 0.2)}
+          initial="hidden"
+          whileInView={"show"}
+          viewport={{ once: true, amount: 0.8 }}
+          href="#"
+          className=" font-code"
+        >
           Resume
         </motion.a>
       </Button>
