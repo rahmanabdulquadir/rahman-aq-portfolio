@@ -1,7 +1,8 @@
-import { navigation } from "../constants";
+
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { fadeIn } from "../components/MotionVariation";
+import { navigation } from "../constants";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -73,15 +74,15 @@ const Navbar = () => {
       <div
         className={`${
           isOpen ? "opacity-100" : "opacity-0 pointer-events-none"
-        } fixed inset-0 bg-gray-900 bg-opacity-90 z-50 transition-opacity duration-300 ease-in-out md:hidden`}
+        } fixed inset-0 bg-black  z-50 transition-opacity duration-300 ease-in-out md:hidden`}
       >
         <div className="flex justify-end p-4">
           <button onClick={toggleMenu} className="text-white text-3xl">
             ✖
           </button>
         </div>
-        <div className="flex flex-col justify-center items-center h-full gap-6">
-          <ul className="flex flex-col items-center gap-6 text-white">
+        <div className="flex flex-col justify-center items-center h-[80%] gap-6">
+          <ul className="flex flex-col items-center gap-6 gap-y-12 text-white">
             {navigation.map((item) => (
               <li key={item.id}>
                 <a

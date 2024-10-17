@@ -23,7 +23,6 @@ function App() {
         {isVisible ? (
           <main className="bg-[url('./assets/images/grid.png')] bg-fixed bg-cover text-white">
             <Navbar />
-            {/* <Header/> */}
             <Home />
             <About />
             <Projects />
