@@ -67,7 +67,7 @@ const Projects = () => {
                   <Button>
                     <a
                       href="#"
-                      className="text-blue-500 hover:text-blue-600 font-semibold transition-colors duration-300"
+                      className="text-white-500 hover:text-blue-600 font-semibold transition-colors duration-300"
                     >
                       Live link
                     </a>
@@ -75,7 +75,7 @@ const Projects = () => {
                   <Button>
                     <a
                       href="#"
-                      className="text-blue-500 hover:text-blue-600 font-semibold transition-colors duration-300"
+                      className="text-white-500 hover:text-blue-600 font-semibold transition-colors duration-300"
                     >
                       Github
                     </a>

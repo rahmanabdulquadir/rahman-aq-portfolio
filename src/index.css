@@ -34,7 +34,11 @@
   }
 }
 
-.space-x-y {
-  @apply max-w-[70rem] 
+.move-item{
+  @apply transform transition-transform duration-500 hover:scale-105 hover:text-blue-600
 }
 
+.link-color:hover{
+  color: #3b82f6;
+  transition: 0.3s ease-in;
+}

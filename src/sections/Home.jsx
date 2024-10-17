@@ -68,11 +68,11 @@ const Home = () => {
         reading books.
       </motion.p>
 
-      <div className="flex justify-center items-center gap-4">
+      <div className="flex justify-center items-center gap-6">
         <a href="https://github.com/rahmanabdulquadir" target="_blank">
           <FaGithub className="size-5" />
         </a>
-        <a href="rahmanaq777@gmail.com" target="_blank">
+        <a href="mailto:rahmanaq777@gmail.com">
           <FaEnvelope className="size-5" />
         </a>
         <a href="https://www.linkedin.com/in/rahman-abdul-quadir-529a46246/" target="_blank">
@@ -84,14 +84,14 @@ const Home = () => {
         
       </div>
 
-      <Button className="mt-5">
+      <Button className="mt-5 move-item">
         <motion.a
           variants={fadeIn("up", 0.2)}
           initial="hidden"
           whileInView={"show"}
           viewport={{ once: true, amount: 0.8 }}
           href="#"
-          className=" font-code"
+          className="move-item font-code "
         >
           Resume
         </motion.a>

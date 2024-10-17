@@ -34,8 +34,8 @@ const Skills = () => {
               key={skill.id}
               className={`flex flex-col items-center justify-center p-6 rounded-lg shadow-lg transform transition duration-300 hover:scale-105 bg-gradient-to-r ${skill.color}`}
             >
-              <div className="text-6xl mb-4">{skill.icon}</div>
-              <h3 className="text-xl font-semibold">{skill.name}</h3>
+              <div className="text-6xl mb-4 move-item">{skill.icon}</div>
+              <h3 className="text-xl font-semibold move-item">{skill.name}</h3>
             </motion.div>
           ))}
         </motion.div>

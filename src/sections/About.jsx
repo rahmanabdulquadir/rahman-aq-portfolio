@@ -43,8 +43,16 @@ const About = () => {
           </p>
 
           <div className="flex flex-col lg:flex-row gap-y-8 lg:gap-y-0 gap-x-8 items-center justify-center lg:justify-start">
-            <Button>Contact Me</Button>
-            <Button>My Portfolio</Button>
+            <Button className="move-item">
+              <a className="move-item" href="#contact">
+                Contact Me
+              </a>
+            </Button>
+            <Button className="move-item">
+              <a className="move-item" href="#projects">
+                Portfolio
+              </a>
+            </Button>
           </div>
         </div>
       </motion.div>

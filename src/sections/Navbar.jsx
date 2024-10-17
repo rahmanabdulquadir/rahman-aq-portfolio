@@ -23,8 +23,8 @@ const Navbar = () => {
       >
         <ul className="flex gap-7 w-[700px] justify-evenly border-2 border-gradient-border mt-8 py-5 px-2 rounded-full">
           {navigation.map((item) => (
-            <li key={item.id}>
-              <a className="font-code font-semibold" href={item.href}>
+            <li key={item.id} className="move-item">
+              <a className="font-code font-semibold  " href={item.href}>
                 {item.title}
               </a>
             </li>
