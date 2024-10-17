@@ -38,10 +38,7 @@
   @apply transform transition-transform duration-500 hover:scale-105 hover:text-blue-600;
 }
 
-.link-color:hover {
-  color: #3b82f6;
-  transition: 0.3s ease-in;
-}
+
 
 .project-card { 
   box-shadow: 0 4px 6px rgba(228, 219, 219, 0.745);

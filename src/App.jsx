@@ -17,9 +17,8 @@ function App() {
       onEnter={() => setIsVisible(true)}
       onExit={() => setIsVisible(false)}
     >
-      {/* The container div doesn't need conditional rendering */}
       <div className="container mx-auto">
-        {/* Conditionally render the main content based on visibility */}
+     
         {isVisible ? (
           <main className="bg-[url('./assets/images/grid.png')] bg-fixed bg-cover text-white">
             <Navbar />
