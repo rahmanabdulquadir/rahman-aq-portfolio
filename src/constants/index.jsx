@@ -106,3 +106,30 @@ export const skillSet = [
     icon: <FaGitAlt className="text-orange-500" />,
   },
 ];
+
+export const projects = [
+  {
+    id: 1,
+    title: "Project One",
+    description: "A brief description of Project One.",
+    image: "path-to-image", // Replace with actual image path
+    link: "https://project-one.com",
+  },
+  {
+    id: 2,
+    title: "Project Two",
+    description: "A brief description of Project Two.",
+    image: "path-to-image",
+    link: "https://project-two.com",
+  },
+  {
+    id: 3,
+    title: "Project Two",
+    description: "A brief description of Project Two.",
+    image: "path-to-image",
+    link: "https://project-two.com",
+    liveLink: "https://harmonious-fenglisu-b99a7d.netlify.app/",
+    githubLink:
+      "https://github.com/rahmanabdulquadir/fitness-equipment-and-accessories-client",
+  },
+];
