@@ -36,22 +36,22 @@ const Projects = () => {
               />
               {/* Card Content */}
               <div className="p-6">
-                <h2 className="text-2xl font-bold mb-2">Magic Card</h2>
+                <h2 className="text-2xl font-bold mb-2">{project.title}</h2>
                 <p className="text-gray-600 mb-4">
                   This is a Magic UI-inspired card with smooth hover animations.
                 </p>
                 <div className="flex justify-between">
-                  <Button>
+                  <Button href={project.liveLink}>
                     <a
-                      href="#"
+                      href={project.liveLink}
                       className="text-white-500 hover:text-blue-600 font-semibold transition-colors duration-300"
                     >
                       Live link
                     </a>
                   </Button>
-                  <Button>
+                  <Button href={project.githubLink}>
                     <a
-                      href="#"
+                      href={project.githubLink}
                       className="text-white-500 hover:text-blue-600 font-semibold transition-colors duration-300"
                     >
                       Github

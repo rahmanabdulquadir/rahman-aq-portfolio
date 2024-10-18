@@ -113,21 +113,23 @@ export const projects = [
     title: "Project One",
     description: "A brief description of Project One.",
     image: "path-to-image", // Replace with actual image path
-    link: "https://project-one.com",
+    liveLink: "https://harmonious-fenglisu-b99a7d.netlify.app/",
+    githubLink:
+      "https://github.com/rahmanabdulquadir/fitness-equipment-and-accessories-client",
   },
   {
     id: 2,
-    title: "Project Two",
-    description: "A brief description of Project Two.",
+    title: "Polish Pro",
+    description: "A car wash booking management system.",
     image: "path-to-image",
-    link: "https://project-two.com",
+    liveLink: "https://car-wash-booking-system-frontend.vercel.app/",
+    githubLink: "https://github.com/rahmanabdulquadir/car-wash-system-frontend",
   },
   {
     id: 3,
-    title: "Project Two",
-    description: "A brief description of Project Two.",
+    title: "Fitflex Essentials",
+    description: "A fitness equipment and accessories website.",
     image: "path-to-image",
-    link: "https://project-two.com",
     liveLink: "https://harmonious-fenglisu-b99a7d.netlify.app/",
     githubLink:
       "https://github.com/rahmanabdulquadir/fitness-equipment-and-accessories-client",
