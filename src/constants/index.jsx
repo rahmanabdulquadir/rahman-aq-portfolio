@@ -110,12 +110,12 @@ export const skillSet = [
 export const projects = [
   {
     id: 1,
-    title: "Project One",
-    description: "A brief description of Project One.",
+    title: "Globe Tales",
+    description:
+      "A social media like platform where people shares their stories, tips and tricks about travel and destination.",
     image: "path-to-image", // Replace with actual image path
-    liveLink: "https://harmonious-fenglisu-b99a7d.netlify.app/",
-    githubLink:
-      "https://github.com/rahmanabdulquadir/fitness-equipment-and-accessories-client",
+    liveLink: "https://globe-tales-client.vercel.app/",
+    githubLink: "https://github.com/rahmanabdulquadir/globe-tales-client",
   },
   {
     id: 2,
@@ -127,7 +127,7 @@ export const projects = [
   },
   {
     id: 3,
-    title: "Fitflex Essentials",
+    title: "FitFlex Essentials",
     description: "A fitness equipment and accessories website.",
     image: "path-to-image",
     liveLink: "https://harmonious-fenglisu-b99a7d.netlify.app/",

@@ -41,17 +41,19 @@ const Projects = () => {
                   This is a Magic UI-inspired card with smooth hover animations.
                 </p>
                 <div className="flex justify-between">
-                  <Button href={project.liveLink}>
+                  <Button href={project.liveLink} target="_blank">
                     <a
                       href={project.liveLink}
+                      target="_blank"
                       className="text-white-500 hover:text-blue-600 font-semibold transition-colors duration-300"
                     >
                       Live link
                     </a>
                   </Button>
-                  <Button href={project.githubLink}>
+                  <Button href={project.githubLink} target="_blank">
                     <a
                       href={project.githubLink}
+                      target="_blank"
                       className="text-white-500 hover:text-blue-600 font-semibold transition-colors duration-300"
                     >
                       Github
