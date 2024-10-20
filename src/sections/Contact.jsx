@@ -2,6 +2,7 @@ import { useState } from "react";
 import Button from "../components/Button";
 import { fadeIn } from "../components/MotionVariation";
 import { motion } from "framer-motion";
+import { toast } from "sonner";
 
 const Contact = () => {
   const [name, setName] = useState("");
@@ -25,19 +26,36 @@ const Contact = () => {
       });
 
       if (response.ok) {
-        // toast.success("Message sent successfully!");
-        alert("Message sent successfully!");
         setName("");
         setEmail("");
         setMessage("");
+        console.log("Form reset:", name, email, message); // Debug here
+        toast.success("Message sent successfully", {
+          classNames: {
+            toast:
+              "bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500  px-8 py-3",
+            title: "text-white-700 text-lg",
+            description: "text-white",
+          },
+        });
       } else {
-        // toast.error("Failed to send the message. Please try again.");
-        alert("failed");
+        toast.error("Failed to send the message. Please try again.", {
+          classNames: {
+            toast: "bg-red-300 px-8 py-3",
+            title: "text-white text-lg",
+            description: "text-white",
+          },
+        });
       }
     } catch (error) {
-      // toast.error("An error occurred. Please try again.");
+      toast.error("An error occurred. Please try again.", {
+        classNames: {
+          toast: "bg-red-300 px-8 py-3",
+          title: "text-white text-lg",
+          description: "text-white",
+        },
+      });
       console.error(error);
-      alert("error occurred");
     } finally {
       setLoading(false);
     }
@@ -78,23 +96,29 @@ const Contact = () => {
             <input
               className="bg-transparent border-b py-3 outline-none w-full placeholder:text-white focus:border-accent transition-all"
               type="text"
+              value={name}
               name="name"
               onChange={(e) => setName(e.target.value)}
               placeholder="Your name"
+              required
             />
             <input
               className="bg-transparent border-b py-3 outline-none w-full placeholder:text-white focus:border-accent transition-all"
               type="email"
+              value={email}
               name="email"
               onChange={(e) => setEmail(e.target.value)}
               placeholder="Your email"
+              required
             />
             <textarea
               className="bg-transparent border-b py-3 outline-none w-full placeholder:text-white focus:border-accent transition-all resize-none mb-12"
               type="text"
               name="message"
+              value={message}
               onChange={(e) => setMessage(e.target.value)}
               placeholder="Your message"
+              required
             ></textarea>
             <div className="w-full flex justify-center lg:justify-start">
               <Button type="submit" disabled={loading} className="move-item">
