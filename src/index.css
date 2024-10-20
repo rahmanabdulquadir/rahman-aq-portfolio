@@ -25,13 +25,12 @@
   max-width: 70rem;
   padding: 100px 20px;
   margin: 0 auto;
-  
 }
 
 @layer utilities {
   ::selection {
-    background-color: linen; /* Change to any desired background color */
-    color: black; /* Change to any desired text color */
+    background-color: linen;
+    color: black;
   }
 }
 
@@ -44,8 +43,6 @@
 }
 
 .project-card:hover {
-  background: rgb(123, 14, 123);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1),
-    /* Regular shadow */ 0 0 15px 3px rgba(43, 119, 239, 0.548),
-    /* Blue shadow */ 0 0 20px 6px rgba(150, 55, 238, 0.5); /* Purple shadow */ /* Basic shadow for depth */
+    0 0 15px 3px rgba(43, 119, 239, 0.548), 0 0 20px 6px rgba(150, 55, 238, 0.5);
 }

@@ -17,7 +17,7 @@ const Footer = () => {
           Built and designed by Rahman Abdul Quadir.
         </h3>
         <h4 className="text-xs font-sora">
-          All rights reserved.© {currentYear}
+          © {currentYear} All rights reserved.
         </h4>
       </motion.div>
     </div>

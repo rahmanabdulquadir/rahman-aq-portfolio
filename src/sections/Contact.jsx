@@ -61,7 +61,7 @@ const Contact = () => {
     }
   };
   return (
-    <section id="contact" className=" flex items-center mt-16">
+    <section id="contact" className="space-x-y flex items-center">
       <div className="container mx-auto">
         <div className="lg:w-full flex flex-col lg:flex-row">
           <motion.div

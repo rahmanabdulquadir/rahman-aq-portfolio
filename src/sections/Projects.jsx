@@ -37,8 +37,8 @@ const Projects = () => {
               {/* Card Content */}
               <div className="p-6">
                 <h2 className="text-2xl font-bold mb-2">{project.title}</h2>
-                <p className="text-gray-600 mb-4">
-                  This is a Magic UI-inspired card with smooth hover animations.
+                <p className="text-gray-600 mb-4 h-20">
+                 {project.description}
                 </p>
                 <div className="flex justify-between">
                   <Button href={project.liveLink} target="_blank">

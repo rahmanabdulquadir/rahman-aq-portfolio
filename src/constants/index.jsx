@@ -47,17 +47,17 @@ export const skillSet = [
   {
     id: 1,
     name: "React.js",
-    icon: <FaReact className="text-black" />,
+    icon: <FaReact className="text-blue-400" />,
   },
   {
     id: 2,
     name: "Next.js",
-    icon: <SiNextdotjs className="text-black" />,
+    icon: <SiNextdotjs className="text-gray-600" />,
   },
   {
     id: 3,
     name: "Redux",
-    icon: <SiRedux className="text-black" />,
+    icon: <SiRedux className="text-purple-500" />,
   },
   {
     id: 4,
@@ -67,7 +67,7 @@ export const skillSet = [
   {
     id: 5,
     name: "Express",
-    icon: <SiExpress className="text-green-500" />,
+    icon: <SiExpress className="text-yellow-500" />,
   },
   {
     id: 6,
@@ -87,7 +87,7 @@ export const skillSet = [
   {
     id: 9,
     name: "CSS3",
-    icon: <FaCss3Alt className="" />,
+    icon: <FaCss3Alt className="text-blue-500" />,
   },
   {
     id: 10,
@@ -112,7 +112,7 @@ export const projects = [
     id: 1,
     title: "Globe Tales",
     description:
-      "A social media like platform where people shares their stories, tips and tricks about travel and destination.",
+      "A social media like platform where people shares their travel stories, tips and tricks",
     image: "path-to-image", // Replace with actual image path
     liveLink: "https://globe-tales-client.vercel.app/",
     githubLink: "https://github.com/rahmanabdulquadir/globe-tales-client",
@@ -120,7 +120,7 @@ export const projects = [
   {
     id: 2,
     title: "Polish Pro",
-    description: "A car wash booking management system.",
+    description: "A car wash booking management system. Where",
     image: "path-to-image",
     liveLink: "https://car-wash-booking-system-frontend.vercel.app/",
     githubLink: "https://github.com/rahmanabdulquadir/car-wash-system-frontend",

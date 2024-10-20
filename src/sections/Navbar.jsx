@@ -12,7 +12,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="text-gray-400 lg:h-[100px]">
+    <div className="text-gray-400 lg:h-[100px] lg:mb-12">
       {/* Large Screen Navbar */}
       <motion.div
         variants={fadeIn("down", 0.3)}
@@ -34,7 +34,7 @@ const Navbar = () => {
 
       {/* Small Screen Navbar */}
       <div className="md:hidden flex justify-between items-center px-4 py-5">
-        <div className="text-xl font-bold">MyBrand</div>
+        <div className="text-xl font-bold">R~AQ</div>
         <button onClick={toggleMenu} className="focus:outline-none">
           {!isOpen ? (
             <svg
