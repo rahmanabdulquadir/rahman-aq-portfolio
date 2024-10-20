@@ -1,8 +1,47 @@
+import { useState } from "react";
 import Button from "../components/Button";
 import { fadeIn } from "../components/MotionVariation";
 import { motion } from "framer-motion";
 
 const Contact = () => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const [loading, setLoading] = useState(false);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+
+    const formData = new FormData();
+    formData.append("name", name);
+    formData.append("email", email);
+    formData.append("message", message);
+
+    try {
+      const response = await fetch("https://getform.io/f/akkgmjda", {
+        method: "POST",
+        body: formData,
+      });
+
+      if (response.ok) {
+        // toast.success("Message sent successfully!");
+        alert("Message sent successfully!");
+        setName("");
+        setEmail("");
+        setMessage("");
+      } else {
+        // toast.error("Failed to send the message. Please try again.");
+        alert("failed");
+      }
+    } catch (error) {
+      // toast.error("An error occurred. Please try again.");
+      console.error(error);
+      alert("error occurred");
+    } finally {
+      setLoading(false);
+    }
+  };
   return (
     <section id="contact" className=" flex items-center mt-16">
       <div className="container mx-auto">
@@ -27,8 +66,9 @@ const Contact = () => {
             </div>
           </motion.div>
           <motion.form
-            action="https://getform.io/f/akkgmjda"
-            method="POST"
+            onSubmit={handleSubmit}
+            // action="https://getform.io/f/akkgmjda"
+            // method="POST"
             variants={fadeIn("left", 0.5)}
             initial="hidden"
             whileInView={"show"}
@@ -39,23 +79,26 @@ const Contact = () => {
               className="bg-transparent border-b py-3 outline-none w-full placeholder:text-white focus:border-accent transition-all"
               type="text"
               name="name"
+              onChange={(e) => setName(e.target.value)}
               placeholder="Your name"
             />
             <input
               className="bg-transparent border-b py-3 outline-none w-full placeholder:text-white focus:border-accent transition-all"
               type="email"
               name="email"
+              onChange={(e) => setEmail(e.target.value)}
               placeholder="Your email"
             />
             <textarea
               className="bg-transparent border-b py-3 outline-none w-full placeholder:text-white focus:border-accent transition-all resize-none mb-12"
               type="text"
               name="message"
+              onChange={(e) => setMessage(e.target.value)}
               placeholder="Your message"
             ></textarea>
             <div className="w-full flex justify-center lg:justify-start">
-              <Button type="submit" className="move-item">
-                Send Message
+              <Button type="submit" disabled={loading} className="move-item">
+                {loading ? "Sending..." : "Send Message"}
               </Button>
             </div>
           </motion.form>
