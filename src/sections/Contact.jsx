@@ -27,6 +27,8 @@ const Contact = () => {
             </div>
           </motion.div>
           <motion.form
+            action="https://getform.io/f/akkgmjda"
+            method="POST"
             variants={fadeIn("left", 0.5)}
             initial="hidden"
             whileInView={"show"}
@@ -36,19 +38,25 @@ const Contact = () => {
             <input
               className="bg-transparent border-b py-3 outline-none w-full placeholder:text-white focus:border-accent transition-all"
               type="text"
+              name="name"
               placeholder="Your name"
             />
             <input
               className="bg-transparent border-b py-3 outline-none w-full placeholder:text-white focus:border-accent transition-all"
-              type="text"
+              type="email"
+              name="email"
               placeholder="Your email"
             />
             <textarea
               className="bg-transparent border-b py-3 outline-none w-full placeholder:text-white focus:border-accent transition-all resize-none mb-12"
+              type="text"
+              name="message"
               placeholder="Your message"
             ></textarea>
             <div className="w-full flex justify-center lg:justify-start">
-              <Button className="move-item"><a className="move-item" href="">Send Message</a></Button>
+              <Button type="submit" className="move-item">
+                Send Message
+              </Button>
             </div>
           </motion.form>
         </div>
