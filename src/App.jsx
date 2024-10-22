@@ -6,6 +6,7 @@ import Home from "./sections/Home";
 import Navbar from "./sections/Navbar";
 import Projects from "./sections/Projects";
 import Skills from "./sections/Skills";
+import Blogs from "./sections/Blogs"
 import ScrollTrigger from "react-scroll-trigger";
 import { useState } from "react";
 import { Toaster } from "sonner";
@@ -20,12 +21,13 @@ function App() {
     >
       <div className="container mx-auto">
         {isVisible ? (
-          <main className="bg-[url('./assets/images/grid.png')] bg-fixed bg-cover text-white">
+          <main >
             <Navbar />
             <Home />
             <About />
             <Projects />
             <Skills />
+            <Blogs/>
             <Contact />
             <Footer />
             <ButtonGradient />

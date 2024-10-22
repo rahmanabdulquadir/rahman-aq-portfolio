@@ -2,6 +2,7 @@ import Button from "../components/Button";
 import { motion } from "framer-motion";
 import { fadeIn } from "../components/MotionVariation";
 import { projects } from "../constants";
+import { Link } from "react-router-dom";
 
 const Projects = () => {
   return (
@@ -51,13 +52,15 @@ const Projects = () => {
                     </a>
                   </Button>
                   <Button href={project.githubLink} target="_blank">
-                    <a
-                      href={project.githubLink}
+                   <Link to={`/projects/${project.id}`}>
+                   <a
+                      // href={project.githubLink}
                       target="_blank"
                       className="text-white-500 hover:text-blue-600 font-semibold transition-colors duration-300"
                     >
-                      Github
+                      View Details
                     </a>
+                   </Link>
                   </Button>
                 </div>
               </div>

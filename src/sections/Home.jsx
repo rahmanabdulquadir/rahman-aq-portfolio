@@ -62,8 +62,9 @@ const Home = () => {
         viewport={{ once: true, amount: 0.3 }}
         className="lg:w-[550px] text-center py-5 leading-loose"
       >
-        Howdy! I'm Rahman Abdul Quadir. I'm passionate about modern web technologies.
-        Apart from coding, I like to play games, listen music,reading books.
+        Howdy! I'm Rahman Abdul Quadir. I'm passionate about modern web
+        technologies. Apart from coding, I like to play games, listen
+        music,reading books.
       </motion.p>
 
       <div className="flex justify-center items-center gap-6">
@@ -87,10 +88,13 @@ const Home = () => {
       <Button className="mt-5 move-item">
         <motion.a
           variants={fadeIn("up", 0.2)}
+          download="/assets/nim.pdf"
           initial="hidden"
           whileInView={"show"}
           viewport={{ once: true, amount: 0.8 }}
-          href="#"
+          href="/assets/nim.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
           className="move-item font-code "
         >
           Resume
