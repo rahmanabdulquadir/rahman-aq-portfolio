@@ -3,48 +3,24 @@ import { fadeIn } from "../components/MotionVariation";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
-// const blogs = [
-//   {
-//     id: 1,
-//     title: "How to Master React",
-//     description:
-//       "A comprehensive guide to building complex interfaces using React.js...",
-//     image: "blog-image-1.jpg",
-//     link: "#",
-//   },
-//   {
-//     id: 2,
-//     title: "Best Practices for MongoDB",
-//     description:
-//       "Learn the key strategies to scale and optimize MongoDB for high-performance apps...",
-//     image: "blog-image-2.jpg",
-//     link: "#",
-//   },
-//   {
-//     id: 3,
-//     title: "Styling with Tailwind CSS",
-//     description:
-//       "Understand how to make your project stand out by using Tailwind CSS...",
-//     image: "blog-image-3.jpg",
-//     link: "#",
-//   },
-// ];
+
 
 const Blogs = () => {
   const [blogs, setBlogs] = useState([]);
   const maxDescriptionLength = 100;
 
-  // const allBlogs = blogs.blogs
+  const fetchBlogs = async () => {
+    try {
+      const response = await fetch("http://localhost:5000/api/v1/blogs");
+      const data = await response.json();
+      setBlogs(data);
+    } catch (error) {
+      console.error("Error fetching blogs:", error);
+    }
+  };
 
   useEffect(() => {
-    // Fetch blogs from backend API
-    fetch("http://localhost:5000/api/v1/blogs") // Assuming the API is running locally on port 5000
-      .then((response) => response.json())
-      .then((data) => {
-        console.log(data);
-        setBlogs(data);
-      })
-      .catch((error) => console.error("Error fetching blogs:", error));
+    fetchBlogs();
   }, []);
   return (
     <section className="space-x-y">
