@@ -61,7 +61,7 @@ const Projects = () => {
                     : project.description}
                 </p>
                 <div className="flex justify-between">
-                  <Button href={project.liveLink} target="_blank">
+                  {/* <Button href={project.liveLink} target="_blank">
                     <a
                       href={project.liveLink}
                       target="_blank"
@@ -69,7 +69,7 @@ const Projects = () => {
                     >
                       Live link
                     </a>
-                  </Button>
+                  </Button> */}
                   <Link to={`/projects/${project._id}`}>
                     <Button href={project.githubLink} target="_blank">
                       <a
