@@ -1,35 +1,51 @@
 import {motion} from 'framer-motion'
 import { fadeIn } from '../components/MotionVariation';
+import { useEffect, useState } from 'react';
 
 
-const blogs = [
-  {
-    id: 1,
-    title: "How to Master React",
-    description:
-      "A comprehensive guide to building complex interfaces using React.js...",
-    image: "blog-image-1.jpg",
-    link: "#",
-  },
-  {
-    id: 2,
-    title: "Best Practices for MongoDB",
-    description:
-      "Learn the key strategies to scale and optimize MongoDB for high-performance apps...",
-    image: "blog-image-2.jpg",
-    link: "#",
-  },
-  {
-    id: 3,
-    title: "Styling with Tailwind CSS",
-    description:
-      "Understand how to make your project stand out by using Tailwind CSS...",
-    image: "blog-image-3.jpg",
-    link: "#",
-  },
-];
+// const blogs = [
+//   {
+//     id: 1,
+//     title: "How to Master React",
+//     description:
+//       "A comprehensive guide to building complex interfaces using React.js...",
+//     image: "blog-image-1.jpg",
+//     link: "#",
+//   },
+//   {
+//     id: 2,
+//     title: "Best Practices for MongoDB",
+//     description:
+//       "Learn the key strategies to scale and optimize MongoDB for high-performance apps...",
+//     image: "blog-image-2.jpg",
+//     link: "#",
+//   },
+//   {
+//     id: 3,
+//     title: "Styling with Tailwind CSS",
+//     description:
+//       "Understand how to make your project stand out by using Tailwind CSS...",
+//     image: "blog-image-3.jpg",
+//     link: "#",
+//   },
+// ];
 
 const Blogs = () => {
+  const [blogs, setBlogs] = useState([]);
+  const maxDescriptionLength = 100;
+
+  // const allBlogs = blogs.blogs
+
+  useEffect(() => {
+    // Fetch blogs from backend API
+    fetch('http://localhost:5000/api/v1/blogs') // Assuming the API is running locally on port 5000
+      .then(response => response.json())
+      .then(data => {
+        console.log(data)
+        setBlogs(data)
+      })
+      .catch(error => console.error('Error fetching blogs:', error));
+  }, []);
   return (
     <section className="space-x-y">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -51,7 +67,7 @@ const Blogs = () => {
 
         {/* Blog Cards Grid */}
         <div className="grid gap-10 lg:grid-cols-3 sm:grid-cols-2">
-          {blogs.map((blog) => (
+          {blogs?.data?.map((blog) => (
             <div
               key={blog.id}
               className="bg-black  shadow-md rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-300"
