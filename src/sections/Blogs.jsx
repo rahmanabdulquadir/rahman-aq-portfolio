@@ -1,7 +1,7 @@
-import {motion} from 'framer-motion'
-import { fadeIn } from '../components/MotionVariation';
-import { useEffect, useState } from 'react';
-
+import { motion } from "framer-motion";
+import { fadeIn } from "../components/MotionVariation";
+import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 // const blogs = [
 //   {
@@ -38,13 +38,13 @@ const Blogs = () => {
 
   useEffect(() => {
     // Fetch blogs from backend API
-    fetch('http://localhost:5000/api/v1/blogs') // Assuming the API is running locally on port 5000
-      .then(response => response.json())
-      .then(data => {
-        console.log(data)
-        setBlogs(data)
+    fetch("http://localhost:5000/api/v1/blogs") // Assuming the API is running locally on port 5000
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data);
+        setBlogs(data);
       })
-      .catch(error => console.error('Error fetching blogs:', error));
+      .catch((error) => console.error("Error fetching blogs:", error));
   }, []);
   return (
     <section className="space-x-y">
@@ -60,9 +60,6 @@ const Blogs = () => {
           >
             / blogs
           </motion.h2>
-          <p className="mt-4">
-            Sharing insights, tips, and tutorials on web development and more.
-          </p>
         </div>
 
         {/* Blog Cards Grid */}
@@ -78,16 +75,20 @@ const Blogs = () => {
                 className="w-full h-48 object-cover"
               />
               <div className="p-6">
-                <h3 className="text-2xl font-semibold">
-                  {blog.title}
-                </h3>
-                <p className="mt-4">{blog.description}</p>
-                <a
-                  href={blog.link}
-                  className="mt-6 inline-block text-blue-500 hover:text-blue-600 font-medium"
-                >
-                  Read More →
-                </a>
+                <h3 className="text-2xl font-semibold">{blog.title}</h3>
+                <p className="mt-4">
+                  {blog.description.length > maxDescriptionLength
+                    ? `${blog.description.slice(0, maxDescriptionLength)}...`
+                    : blog.description}
+                </p>
+                <Link to={`/blogs/${blog._id}`}>
+                  <a
+                    href={blog.link}
+                    className="mt-6 inline-block text-blue-500 hover:text-blue-600 font-medium"
+                  >
+                    Read More →
+                  </a>
+                </Link>
               </div>
             </div>
           ))}
