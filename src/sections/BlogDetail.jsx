@@ -7,14 +7,16 @@ const BlogDetail = () => {
 
   useEffect(() => {
     // Fetch the blog details by ID
-    fetch(`http://localhost:5000/api/v1/blogs/${_id}`)
+    fetch(
+      `https://portfolio-dashboard-server-kappa.vercel.app/api/v1/blogs/${_id}`
+    )
       .then((response) => response.json())
       .then((data) => setBlog(data))
       .catch((error) => console.error("Error fetching blog details:", error));
   }, [_id]);
 
   if (!blog) return <div>Loading...</div>;
-  console.log(blog)
+  console.log(blog);
 
   return (
     <div className="space-x-y h-screen text-center">

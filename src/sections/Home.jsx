@@ -85,21 +85,19 @@ const Home = () => {
         </a>
       </div>
 
-      <Button className="mt-5 move-item">
-        <motion.a
-          variants={fadeIn("up", 0.2)}
-          download="/assets/nim.pdf"
-          initial="hidden"
-          whileInView={"show"}
-          viewport={{ once: true, amount: 0.8 }}
-          href="/assets/nim.pdf"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="move-item font-code "
-        >
-          Resume
-        </motion.a>
-      </Button>
+      <motion.a
+        variants={fadeIn("up", 0.2)}
+        download="/assets/rahman_resume.pdf"
+        initial="hidden"
+        whileInView={"show"}
+        viewport={{ once: true, amount: 0.8 }}
+        href="/assets/rahman_resume.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="move-item font-code "
+      >
+        <Button className="mt-5 move-item">Resume</Button>
+      </motion.a>
 
       <img src={bubble} alt="" className="absolute z-[-20]" />
     </div>

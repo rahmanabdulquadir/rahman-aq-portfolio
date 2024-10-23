@@ -12,7 +12,9 @@ const ProjectDetails = () => {
 
   useEffect(() => {
     // Fetch the blog details by ID
-    fetch(`http://localhost:5000/api/v1/projects/${id}`)
+    fetch(
+      `https://portfolio-dashboard-server-kappa.vercel.app/api/v1/projects/${id}`
+    )
       .then((response) => response.json())
       .then((data) => {
         console.log(data);

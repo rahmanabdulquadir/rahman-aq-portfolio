@@ -41,8 +41,9 @@ const About = () => {
             and everything in between. Apart from coding, I like to play games,
             listen music,reading books.
           </p>
+          <h2> <span className="mb-10 bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 bg-clip-text text-transparent">Education</span> - Willes Little Flower - (2019-2022) </h2>
 
-          <div className="flex flex-col lg:flex-row gap-y-8 lg:gap-y-0 gap-x-8 items-center justify-center lg:justify-start">
+          <div className="flex flex-col lg:flex-row gap-y-8 lg:gap-y-0 gap-x-8 items-center justify-center lg:justify-start mt-7">
             <Button className="move-item">
               <a className="move-item" href="#contact">
                 Contact Me

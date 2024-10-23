@@ -1,7 +1,6 @@
 import Button from "../components/Button";
 import { motion } from "framer-motion";
 import { fadeIn } from "../components/MotionVariation";
-// import { projects } from "../constants";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 
@@ -9,19 +8,28 @@ const Projects = () => {
   const [projects, setProjects] = useState([]);
   const maxDescriptionLength = 50;
 
-  const fetchBlogs = async () => {
+  const fetchProjects = async () => {
     try {
-      const response = await fetch("http://localhost:5000/api/v1/projects");
+      const response = await fetch(
+        "https://portfolio-dashboard-server-kappa.vercel.app/api/v1/projects"
+      );
       const data = await response.json();
       setProjects(data);
     } catch (error) {
-      console.error("Error fetching blogs:", error);
+      console.error("Error fetching projects:", error);
     }
   };
 
   useEffect(() => {
-    fetchBlogs();
+    fetchProjects(); // Initial fetch
+
+    // Set an interval to fetch projects every 3 seconds
+    const interval = setInterval(fetchProjects, 3000);
+
+    // Clear the interval when the component unmounts
+    return () => clearInterval(interval);
   }, []);
+
   return (
     <div id="projects" className="space-x-y">
       <div>
@@ -48,7 +56,7 @@ const Projects = () => {
               className="project-card group w-80 h-96 bg-black shadow-lg rounded-lg overflow-hidden relative transform transition-transform duration-500 hover:scale-105"
             >
               <img
-                src="https://via.placeholder.com/320x180"
+                src={project.image}
                 alt="Project Image"
                 className="w-full h-40 object-cover"
               />
@@ -60,20 +68,14 @@ const Projects = () => {
                     ? `${project.description.slice(0, maxDescriptionLength)}...`
                     : project.description}
                 </p>
-                <div className="flex justify-between">
-                  {/* <Button href={project.liveLink} target="_blank">
-                    <a
-                      href={project.liveLink}
-                      target="_blank"
-                      className="text-white-500 hover:text-blue-600 font-semibold transition-colors duration-300"
-                    >
-                      Live link
-                    </a>
-                  </Button> */}
+                <div className="">
                   <Link to={`/projects/${project._id}`}>
-                    <Button href={project.githubLink} target="_blank">
+                    <Button
+                      className={"w-full mx-auto"}
+                      href={project.githubLink}
+                      target="_blank"
+                    >
                       <a
-                        // href={project.githubLink}
                         target="_blank"
                         className="text-white-500 hover:text-blue-600 font-semibold transition-colors duration-300"
                       >

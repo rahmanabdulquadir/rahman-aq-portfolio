@@ -3,15 +3,15 @@ import { fadeIn } from "../components/MotionVariation";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
-
-
 const Blogs = () => {
   const [blogs, setBlogs] = useState([]);
   const maxDescriptionLength = 100;
 
   const fetchBlogs = async () => {
     try {
-      const response = await fetch("http://localhost:5000/api/v1/blogs");
+      const response = await fetch(
+        "https://portfolio-dashboard-server-kappa.vercel.app/api/v1/blogs"
+      );
       const data = await response.json();
       setBlogs(data);
     } catch (error) {
@@ -21,7 +21,14 @@ const Blogs = () => {
 
   useEffect(() => {
     fetchBlogs();
+
+    // Set an interval to fetch blogs every 3 seconds
+    const interval = setInterval(fetchBlogs, 3000);
+
+    // Clear the interval when the component unmounts
+    return () => clearInterval(interval);
   }, []);
+
   return (
     <section className="space-x-y">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -43,7 +50,7 @@ const Blogs = () => {
           {blogs?.data?.map((blog) => (
             <div
               key={blog.id}
-              className="bg-black  shadow-md rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-300"
+              className="bg-black shadow-md rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-300"
             >
               <img
                 src={blog.image}
