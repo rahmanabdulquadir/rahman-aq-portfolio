@@ -18,7 +18,7 @@ const Home = () => {
         initial="hidden"
         whileInView={"show"}
         viewport={{ once: true, amount: 0.8 }}
-        className="text-4xl md:text-7xl font-bold mb-4 font-code"
+        className="text-[28px] md:text-6xl lg:text-7xl font-bold mb-4 font-code"
       >
         hi,{" "}
         <span className="bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 bg-clip-text text-transparent">
@@ -31,9 +31,13 @@ const Home = () => {
         initial="hidden"
         whileInView={"show"}
         viewport={{ once: true, amount: 0 }}
-        className="lg:w-[370px] w-[200px]"
+        className="lg:w-[370px] md:w-[180px] w-[100px]"
       >
-        <img className="lg:ml-32 ml-20 mt-[-10px]" src={curve} alt="" />
+        <img
+          className="lg:ml-32 md:ml-24 ml-16 mt-[-10px]"
+          src={curve}
+          alt=""
+        />
       </motion.div>
 
       <motion.p
