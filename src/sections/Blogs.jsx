@@ -39,7 +39,7 @@ const Blogs = () => {
             initial="hidden"
             whileInView={"show"}
             viewport={{ once: true, amount: 0.3 }}
-            className="lg:text-5xl text-2xl lg:text-start text-center text-[#48dd70] font-bold mb-12"
+            className="lg:text-5xl text-2xl lg:text-start text-center text-[#47dee1] font-bold mb-12"
           >
             / blogs
           </motion.h2>

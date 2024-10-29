@@ -5,7 +5,7 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
   console.log(currentYear);
   return (
-    <div className="text-center mt-12">
+    <div className="text-center mt-12 text-gray-400">
       <motion.div
         variants={fadeIn("down", 0.3)}
         initial="hidden"
