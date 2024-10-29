@@ -11,7 +11,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="text-gray-400 lg:h-[100px] lg:mb-12">
+    <div className="text-gray-300 lg:h-[100px] lg:mb-12">
       {/* Large Screen Navbar */}
       <motion.div
         variants={fadeIn("down", 0.3)}

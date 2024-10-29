@@ -26,16 +26,16 @@ const BlogDetail = () => {
         onClick={() => navigate(-1)}
         className="flex items-center gap-3 pb-5 cursor-pointer"
       >
-        <BiArrowBack className="text-3xl" />
+        <BiArrowBack className="lg:text-3xl text-2xl" />
         <h2 className="text-white">Go Back</h2>
       </div>
-      <h1 className="text-3xl font-bold mb-4">{blog?.data?.title}</h1>
+      <h1 className="lg:text-3xl text-2xl font-bold mb-4">{blog?.data?.title}</h1>
       <img
         src={blog?.data?.image}
         alt={blog?.data?.title}
-        className="w-full h-64 object-cover mb-4 rounded"
+        className="lg:w-full h-64 object-cover mb-4 rounded"
       />
-      <p>{blog?.data?.description}</p>
+      <p className="text-gray-300">{blog?.data?.description}</p>
     </div>
   );
 };

@@ -51,7 +51,7 @@ const ProjectDetails = () => {
         />
       </div>
 
-      <p className="text-lg">{projects?.data?.description}</p>
+      <p className="lg:text-lg text-md text-gray-300">{projects?.data?.description}</p>
 
       <div className="lg:flex gap-3 mt-10 justify-center">
         <h2 className="">Tech Stack: </h2>
