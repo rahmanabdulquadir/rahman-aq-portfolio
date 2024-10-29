@@ -65,7 +65,7 @@ const Contact = () => {
       <div className="container mx-auto">
         <div className="lg:w-full flex flex-col lg:flex-row">
           <motion.div
-            variants={fadeIn("right", 0.5)}
+            variants={fadeIn("up", 0.5)}
             initial="hidden"
             whileInView={"show"}
             viewport={{ once: true, amount: 0.3 }}
@@ -87,7 +87,7 @@ const Contact = () => {
             onSubmit={handleSubmit}
             // action="https://getform.io/f/akkgmjda"
             // method="POST"
-            variants={fadeIn("left", 0.5)}
+            variants={fadeIn("down", 0.5)}
             initial="hidden"
             whileInView={"show"}
             viewport={{ once: true, amount: 0.3 }}
