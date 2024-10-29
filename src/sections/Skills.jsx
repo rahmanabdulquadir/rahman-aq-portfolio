@@ -29,8 +29,8 @@ const Skills = () => {
   }, []);
 
   return (
-    <div className="space-x-y">
-      <section className="py-16 ">
+    <div id="skills" className="space-x-y">
+      <section className=" ">
         <div className="container mx-auto">
           <motion.h2
             variants={fadeIn("down", 0.5)}

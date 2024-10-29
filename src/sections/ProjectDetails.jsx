@@ -37,13 +37,13 @@ const ProjectDetails = () => {
         onClick={() => navigate(-1)}
         className="flex items-center gap-3 pb-5 cursor-pointer"
       >
-        <BiArrowBack className="text-3xl" />
+        <BiArrowBack className="lg:text-3xl text-2xl" />
         <h2 className="text-white">Go Back</h2>
       </div>
 
       <h1 className="text-3xl font-bold mb-4">{projects?.data?.title}</h1>
 
-      <div className="h-[500px] overflow-y-scroll mb-10">
+      <div className="lg:h-[500px] overflow-y-scroll lg:mb-10">
         <img
           src={projects?.data?.image}
           alt={projects?.data?.title}

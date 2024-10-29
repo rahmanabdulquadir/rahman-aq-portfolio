@@ -53,7 +53,7 @@ const Projects = () => {
           {projects?.data?.map((project) => (
             <div
               key={project.id}
-              className="project-card group w-80 h-96 bg-black shadow-lg rounded-lg overflow-hidden relative transform transition-transform duration-500 hover:scale-105"
+              className="project-card group lg:w-80 lg:h-96 w-64 bg-black shadow-lg rounded-lg overflow-hidden relative transform transition-transform duration-500 hover:scale-105"
             >
               <img
                 src={project.image}
@@ -63,7 +63,7 @@ const Projects = () => {
               {/* Card Content */}
               <div className="p-6">
                 <h2 className="text-2xl font-bold mb-2">{project.title}</h2>
-                <p className="text-gray-600 mb-4 h-20">
+                <p className="text-gray-400 mb-4 font-code">
                   {project.description.length > maxDescriptionLength
                     ? `${project.description.slice(0, maxDescriptionLength)}...`
                     : project.description}

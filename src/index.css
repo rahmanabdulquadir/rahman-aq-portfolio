@@ -11,6 +11,7 @@
   margin: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
+  font-family: var(--font-code);
   /* color: rgb(179, 178, 178); */
 }
 
@@ -23,7 +24,7 @@
 
 .space-x-y {
   max-width: 70rem;
-  padding: 100px 20px;
+  padding: 42px 20px;
   margin: 0 auto;
 }
 

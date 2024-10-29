@@ -11,7 +11,7 @@ const Home = () => {
   return (
     <div
       id="home"
-      className={`space-x-y relative pt-20  flex flex-col items-center justify-center text-center`}
+      className={`lg:pb-[80px] relative lg:pt-28 pt-20 pb-[65px]  flex flex-col items-center justify-center text-center`}
     >
       <motion.h1
         variants={fadeIn("up", 0.3)}
@@ -45,7 +45,7 @@ const Home = () => {
         initial="hidden"
         whileInView={"show"}
         viewport={{ once: true, amount: 0.3 }}
-        className="text-xl md:text-3xl font-semibold mt-7 bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 bg-clip-text text-transparent"
+        className="text-xl font-code md:text-3xl font-semibold mt-7 bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 bg-clip-text text-transparent"
       >
         <Typewriter
           options={{
@@ -64,7 +64,7 @@ const Home = () => {
         initial="hidden"
         whileInView={"show"}
         viewport={{ once: true, amount: 0.3 }}
-        className="lg:w-[550px] text-center py-5 leading-loose"
+        className="lg:w-[550px] lg:text-lg text-center py-5 leading-loose font-code"
       >
         Howdy! I'm Rahman Abdul Quadir. I'm passionate about modern web
         technologies. Apart from coding, I like to play games, listen
@@ -100,7 +100,7 @@ const Home = () => {
         rel="noopener noreferrer"
         className="move-item font-code "
       >
-        <Button className="mt-5 move-item">Resume</Button>
+        <Button className="lg:mt-5 mt-7 move-item">Resume</Button>
       </motion.a>
 
       <img src={bubble} alt="" className="absolute z-[-20]" />

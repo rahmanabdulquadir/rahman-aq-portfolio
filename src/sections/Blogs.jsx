@@ -58,8 +58,8 @@ const Blogs = () => {
                 className="w-full h-48 object-cover"
               />
               <div className="p-6">
-                <h3 className="text-2xl font-semibold">{blog.title}</h3>
-                <p className="mt-4">
+                <h3 className="lg:text-2xl text-xl font-semibold">{blog.title}</h3>
+                <p className="mt-4 text-md  font-code">
                   {blog.description.length > maxDescriptionLength
                     ? `${blog.description.slice(0, maxDescriptionLength)}...`
                     : blog.description}
