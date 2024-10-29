@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { fadeIn } from "../components/MotionVariation";
@@ -33,8 +32,15 @@ const Navbar = () => {
       </motion.div>
 
       {/* Small Screen Navbar */}
-      <div className="md:hidden flex justify-between items-center px-4 py-5">
-        <div className="text-xl font-bold">R~AQ</div>
+      <div className="md:hidden flex justify-between items-center px-4 ">
+        <div className="">
+          <img
+            href="/"
+            className="w-24 h-24 mt-7"
+            src="/assets/raq_logo.png"
+            alt=""
+          />
+        </div>
         <button onClick={toggleMenu} className="focus:outline-none">
           {!isOpen ? (
             <svg
@@ -86,7 +92,7 @@ const Navbar = () => {
             {navigation.map((item) => (
               <li key={item.id}>
                 <a
-                  className="text-2xl font-semibold"
+                  className="text-2xl font-semibold font-code"
                   href={item.href}
                   onClick={toggleMenu} // Close menu when a link is clicked
                 >
