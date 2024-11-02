@@ -32,7 +32,7 @@ const Navbar = () => {
       </motion.div>
 
       {/* Small Screen Navbar */}
-      <div className="md:hidden flex justify-between items-center px-4 ">
+      <div className="md:hidden flex justify-between items-center px-4">
         <div className="">
           <img
             href="/"

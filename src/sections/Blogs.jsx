@@ -30,7 +30,7 @@ const Blogs = () => {
   }, []);
 
   return (
-    <section className="space-x-y">
+    <section id="blogs" className="space-x-y">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Blog Section Title */}
         <div className="text-center mb-12">

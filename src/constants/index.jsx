@@ -25,6 +25,11 @@ export const navigation = [
   },
   {
     id: "5",
+    title: "Blogs",
+    href: "#blogs"
+  },
+  {
+    id: "5",
     title: "Contact",
     href: "#contact",
   },
