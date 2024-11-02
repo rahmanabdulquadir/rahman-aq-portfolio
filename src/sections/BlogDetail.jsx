@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react";
 import { BiArrowBack } from "react-icons/bi";
+import { CgSpinner } from "react-icons/cg";
 import { useNavigate, useParams } from "react-router-dom";
 
 const BlogDetail = () => {
   const { _id } = useParams(); // Get the blog id from the route
   const [blog, setBlog] = useState(null);
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   useEffect(() => {
     // Fetch the blog details by ID
@@ -17,8 +18,12 @@ const BlogDetail = () => {
       .catch((error) => console.error("Error fetching blog details:", error));
   }, [_id]);
 
-  if (!blog) return <div>Loading...</div>;
-  console.log(blog);
+  if (!blog)
+    return (
+      <div className="h-screen flex justify-center items-center ">
+        <CgSpinner className="text-cyan-500 size-10" />
+      </div>
+    );
 
   return (
     <div className="space-x-y h-screen text-center">
@@ -29,7 +34,9 @@ const BlogDetail = () => {
         <BiArrowBack className="lg:text-3xl text-2xl" />
         <h2 className="text-white">Go Back</h2>
       </div>
-      <h1 className="lg:text-3xl text-2xl font-bold mb-4">{blog?.data?.title}</h1>
+      <h1 className="lg:text-3xl text-2xl font-bold mb-4">
+        {blog?.data?.title}
+      </h1>
       <img
         src={blog?.data?.image}
         alt={blog?.data?.title}
