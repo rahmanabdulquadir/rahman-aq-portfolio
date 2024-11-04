@@ -1,55 +1,65 @@
 import Button from "../components/Button";
 import rahmanImg from "../assets/images/rahman_aq.jpg";
 import { motion } from "framer-motion";
-import { fadeIn, zoomIn } from "../components/MotionVariation";
+import { fadeIn } from "../components/MotionVariation";
 
 const About = () => {
   return (
-    <motion.div
-      variants={zoomIn(0.2)} // Add delay as needed
-      initial="hidden"
-      whileInView="show"
-      viewport={{ once: true, amount: 0.5 }}
+    <div
       id="about"
       className="space-x-y  flex flex-col-reverse lg:flex-row justify-center"
     >
-      <motion.div
-        variants={fadeIn("up", 0.5)}
-        initial="hidden"
-        whileInView={"show"}
-        viewport={{ once: true, amount: 0.3 }}
+      <div
         className="flex-1 lg:w-2/4 w-full lg:text-start text-center"
       >
         <motion.h2
-          variants={fadeIn("up", 0.1)}
+          variants={fadeIn("up", 1)}
           initial="hidden"
           whileInView={"show"}
-          viewport={{ once: true, amount: 0.3 }}
+          viewport={{ once: true, amount: 1 }}
           className="hidden lg:block text-5xl lg:text-start text-center text-[#ff776f] font-bold mb-16"
         >
           / about me
         </motion.h2>
 
         <div className="">
-          <h3 className="lg:text-4xl text-3xl font-semibold mb-4 bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 bg-clip-text text-transparent">
+          <motion.h3
+            variants={fadeIn("up", 1.5)}
+            initial="hidden"
+            whileInView={"show"}
+            viewport={{ once: true, amount: 0.3 }}
+            className="lg:text-4xl text-3xl font-semibold mb-4 bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 bg-clip-text text-transparent"
+          >
             Frontend Developer
-          </h3>
-          <p className="mb-6 lg:w-[600px] lg:text-start text-center text-md lg:text-lg leading-loose font-code">
+          </motion.h3>
+          <motion.p
+            variants={fadeIn("up", 0.3)}
+            initial="hidden"
+            whileInView={"show"}
+            viewport={{ once: true, amount: 0.3 }}
+            className="mb-6 lg:w-[600px] lg:text-start text-center text-md lg:text-lg leading-loose font-code"
+          >
             Hey there, I am Rahman Abdul Quadir, a web developer with a twist of
             unconventional creativity.I have great interest in full-stack
             development, artificial intelligence, human-computer interactions,
             and everything in between. Apart from coding, I like to play games,
             listen music,reading books.
-          </p>
-          <h2>
+          </motion.p>
+          <motion.h2  variants={fadeIn("up", 0.3)}
+            initial="hidden"
+            whileInView={"show"}
+            viewport={{ once: true, amount: 0.3 }}>
             {" "}
             <span className="mb-10 bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 bg-clip-text text-transparent">
               Education
             </span>{" "}
             - Willes Little Flower (2019-2022){" "}
-          </h2>
+          </motion.h2>
 
-          <div className="flex flex-col lg:flex-row gap-y-8 lg:gap-y-0 gap-x-8 items-center justify-center lg:justify-start mt-7">
+          <motion.div  variants={fadeIn("up", 0.3)}
+            initial="hidden"
+            whileInView={"show"}
+            viewport={{ once: true, amount: 0.3 }} className="flex flex-col lg:flex-row gap-y-8 lg:gap-y-0 gap-x-8 items-center justify-center lg:justify-start mt-7">
             <Button className="move-item">
               <a className="move-item" href="#projects">
                 Projects
@@ -60,11 +70,11 @@ const About = () => {
                 Contact Me
               </a>
             </Button>
-          </div>
+          </motion.div>
         </div>
-      </motion.div>
+      </div>
       <motion.div
-        variants={fadeIn("down", 0.7)}
+        variants={fadeIn("down", 0.3)}
         initial="hidden"
         whileInView={"show"}
         viewport={{ once: true, amount: 0.3 }}
@@ -79,7 +89,7 @@ const About = () => {
           alt=""
         />
       </motion.div>
-    </motion.div>
+    </div>
   );
 };
 

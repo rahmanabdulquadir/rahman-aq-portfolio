@@ -26,7 +26,7 @@ const ProjectDetails = () => {
   if (!projects)
     return (
       <div className="h-screen flex justify-center items-center ">
-        <CgSpinner className="text-cyan-500 size-10" />
+        <CgSpinner className="text-[#48dd70] size-10" />
       </div>
     );
   console.log(projects);

@@ -17,8 +17,8 @@ const Home = () => {
         variants={fadeIn("up", 0.3)}
         initial="hidden"
         whileInView={"show"}
-        viewport={{ once: true, amount: 0.8 }}
-        className="text-[28px] md:text-6xl lg:text-7xl font-bold mb-4 font-code"
+        viewport={{ once: true, amount: 0.3 }}
+        className="text-[32px] md:text-6xl lg:text-7xl font-bold mb-4 font-code"
       >
         hi,{" "}
         <span className="bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 bg-clip-text text-transparent">
@@ -27,11 +27,11 @@ const Home = () => {
         here!
       </motion.h1>
       <motion.div
-        variants={fadeIn("up", 0.6)}
+        variants={fadeIn("up", 1)}
         initial="hidden"
         whileInView={"show"}
-        viewport={{ once: true, amount: 0 }}
-        className="lg:w-[370px] md:w-[180px] w-[100px]"
+        viewport={{ once: true, amount: 0.3 }}
+        className="lg:w-[370px] md:w-[180px] w-[130px]"
       >
         <img
           className="lg:ml-32 md:ml-24 ml-16 mt-[-10px]"
@@ -64,7 +64,7 @@ const Home = () => {
         initial="hidden"
         whileInView={"show"}
         viewport={{ once: true, amount: 0.3 }}
-        className="lg:w-[550px] lg:text-lg text-center py-5 leading-loose font-code"
+        className="lg:w-[550px] lg:text-lg text-gray-300 text-center py-5 leading-loose font-code"
       >
         Howdy! I'm Rahman Abdul Quadir. I'm passionate about modern web
         technologies. Apart from coding, I like to play games, listen
@@ -89,21 +89,26 @@ const Home = () => {
         </a>
       </div>
 
-      <motion.a
-        variants={fadeIn("up", 0.2)}
-        download="/assets/rahman_resume.pdf"
+      <motion.div
+        variants={fadeIn("up", 0.3)}
         initial="hidden"
         whileInView={"show"}
-        viewport={{ once: true, amount: 0.8 }}
-        href="/assets/rahman_resume.pdf"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="move-item font-code "
+        viewport={{ once: true, amount: 0.3 }}
       >
-        <Button className="lg:mt-5 mt-7 move-item">Resume</Button>
-      </motion.a>
+        <a
+          download="/assets/rahman_resume.pdf"
+          href="/assets/rahman_resume.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="move-item "
+        >
+          <Button className="lg:mt-5 mt-7 move-item">Resume</Button>
+        </a>
+      </motion.div>
 
-      <img src={bubble} alt="" className="absolute z-[-20]" />
+      <motion.img   variants={fadeIn("up", 1.5)}
+        initial="hidden"
+        whileInView={"show"} src={bubble} alt="" className="absolute z-[-20]" />
     </div>
   );
 };

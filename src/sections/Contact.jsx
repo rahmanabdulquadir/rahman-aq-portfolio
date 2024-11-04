@@ -65,16 +65,18 @@ const Contact = () => {
       <div className="container mx-auto">
         <div className="lg:w-full flex flex-col lg:flex-row">
           <motion.div
-            variants={fadeIn("up", 0.5)}
+            variants={fadeIn("up", 0.3)}
             initial="hidden"
             whileInView={"show"}
             viewport={{ once: true, amount: 0.3 }}
             className="w-full flex-1 flex lg:justify-start justify-center items-center"
           >
             <div className="w-full flex flex-col justify-center lg:text-start text-center">
-              <h2 className="lg:text-5xl text-2xl lg:text-start text-center text-[#ac6aff] font-bold mb-12">
+              <motion.h2   variants={fadeIn("up", 1)}
+        initial="hidden"
+        whileInView={"show"} className="lg:text-5xl text-2xl lg:text-start text-center text-[#ac6aff] font-bold mb-12">
                 / contact
-              </h2>
+              </motion.h2>
               <h4 className="text-xl font-code uppercase light-slate font-medium mb-2 tracking-wide">
                 Get in touch
               </h4>
@@ -87,7 +89,7 @@ const Contact = () => {
             onSubmit={handleSubmit}
             // action="https://getform.io/f/akkgmjda"
             // method="POST"
-            variants={fadeIn("down", 0.5)}
+            variants={fadeIn("down", 0.3)}
             initial="hidden"
             whileInView={"show"}
             viewport={{ once: true, amount: 0.3 }}

@@ -33,7 +33,7 @@ const Skills = () => {
       <section className=" ">
         <div className="container mx-auto">
           <motion.h2
-            variants={fadeIn("down", 0.5)}
+            variants={fadeIn("up", 1)}
             initial="hidden"
             whileInView={"show"}
             viewport={{ once: true, amount: 0.3 }}

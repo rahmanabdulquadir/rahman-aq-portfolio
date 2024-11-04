@@ -35,7 +35,7 @@ const Blogs = () => {
         {/* Blog Section Title */}
         <div className="text-center mb-12">
           <motion.h2
-            variants={fadeIn("up", 0.1)}
+            variants={fadeIn("up", 1)}
             initial="hidden"
             whileInView={"show"}
             viewport={{ once: true, amount: 0.3 }}
@@ -59,7 +59,7 @@ const Blogs = () => {
               />
               <div className="p-6">
                 <h3 className="lg:text-2xl text-xl font-semibold">{blog.title}</h3>
-                <p className="mt-4 text-md  font-code">
+                <p className="mt-4 text-md text-gray-300  font-code">
                   {blog.description.length > maxDescriptionLength
                     ? `${blog.description.slice(0, maxDescriptionLength)}...`
                     : blog.description}

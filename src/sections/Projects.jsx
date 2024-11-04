@@ -34,7 +34,7 @@ const Projects = () => {
     <div id="projects" className="space-x-y">
       <div>
         <motion.h2
-          variants={fadeIn("up", 0.1)}
+          variants={fadeIn("up", 1)}
           initial="hidden"
           whileInView={"show"}
           viewport={{ once: true, amount: 0.3 }}
@@ -44,7 +44,7 @@ const Projects = () => {
         </motion.h2>
 
         <motion.div
-          variants={fadeIn("down", 0.5)}
+          variants={fadeIn("up", 1.5)}
           initial="hidden"
           whileInView={"show"}
           viewport={{ once: true, amount: 0.3 }}
@@ -63,7 +63,7 @@ const Projects = () => {
               {/* Card Content */}
               <div className="p-6">
                 <h2 className="text-2xl font-bold mb-2">{project.title}</h2>
-                <p className="text-gray-400 mb-4 font-code">
+                <p className="text-gray-300 mb-4 font-code">
                   {project.description.length > maxDescriptionLength
                     ? `${project.description.slice(0, maxDescriptionLength)}...`
                     : project.description}

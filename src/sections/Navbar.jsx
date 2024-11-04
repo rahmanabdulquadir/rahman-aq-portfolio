@@ -32,15 +32,14 @@ const Navbar = () => {
       </motion.div>
 
       {/* Small Screen Navbar */}
-      <div className="md:hidden flex justify-between items-center px-4">
-        <div className="">
-          <img
-            href="/"
-            className="w-24 h-24 mt-7"
-            src="/assets/raq_logo.png"
-            alt=""
-          />
-        </div>
+      <div className="md:hidden flex justify-between items-center px-5 mt-[-15px]">
+        <img
+          href="/"
+          className="w-24 h-24 mt-7"
+          src="/assets/raq_logo.png"
+          alt=""
+        />
+
         <button onClick={toggleMenu} className="focus:outline-none">
           {!isOpen ? (
             <svg

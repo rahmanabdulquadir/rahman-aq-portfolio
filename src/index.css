@@ -36,8 +36,9 @@
 }
 
 .move-item {
-  @apply transform transition-transform duration-500 hover:scale-105 hover:text-blue-600;
+  @apply transform transition-transform duration-500 hover:scale-105 hover:text-cyan-500;
 }
+
 
 .project-card {
   box-shadow: 0 4px 6px rgba(228, 219, 219, 0.745);
